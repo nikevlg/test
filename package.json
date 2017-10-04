@@ -1,0 +1,29 @@
+{
+  "name": "doczilla",
+  "version": "2.0.0",
+  "description": "promo site",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "args": "^3.0.4",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-batch-replace": "0.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-iconfont": "^9.0.2",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-path": "^3.0.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11"
+  }
+}
