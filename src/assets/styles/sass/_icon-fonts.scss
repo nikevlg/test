@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "doczilla-icons";
+  src: url('../../fonts/doczilla-icons.eot');
+  src: url('../../fonts/doczilla-icons.eot?#iefix') format('eot'),
+  url('../../fonts/doczilla-icons.woff') format('woff'),
+  url('../../fonts/doczilla-icons.ttf') format('truetype'),
+  url('../../fonts/doczilla-icons.svg#doczilla-icons') format('svg');
+}
+
+.doc-icon:before {
+  font-family: "doczilla-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+  font-size: 16px;
+}
+
+
+.doc-icon-template:before {
+  content: "\E001";
+}
+

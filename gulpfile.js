@@ -39,8 +39,8 @@ var runTimestamp = Math.round(Date.now()/1000);
 paths = { 
   templates: ['./src/templates/**/*.html', '!./src/templates/blocks/**/*.html'],
   tmp: './tmp/**/*.*',
-  svg: './src/svg/**/*.svg',
-  svgTemplate: './src/svg/icon-font',
+  svg: './src/assets/svg/*.svg',
+  svgTemplate: './src/assets/svg/icon-font',
 
 };
 
@@ -71,11 +71,11 @@ gulp.task('Iconfont', function(){
             fontName: 'doczilla-icons',
             cssClass: 'doc-icon',
             path: paths.svgTemplate, //путь до шаблона стилей 
-            targetPath: './src/assets/styles/sass/_icon-fonts.scss', //путь вывода sass стилей иконок
-            fontPath: './src/assets/fonts/'//путь где лежат скомпиленные шрифты
+            targetPath: '../styles/sass/_icon-fonts.scss', //путь вывода sass стилей иконок
+            fontPath: '../../fonts/'//путь где лежат скомпиленные шрифты
         }))
         .pipe(iconfont({
-            fontName: 'doczilla-icons', // required
+            fontName: 'doczilla-icons',
             prependUnicode: true, // recommended option
             formats: ['ttf', 'eot', 'woff', 'svg'], // default, 'woff2' and 'svg' are available
             timestamp: runTimestamp // recommended to get consistent builds when watching files
