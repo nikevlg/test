@@ -30,14 +30,18 @@ prefix      = require('gulp-autoprefixer');
 imagemin    = require('gulp-imagemin');
 
 /*--svg Icons--*/
-//iconfont    = require('gulp-iconfont');
-//iconfontCss = require('gulp-iconfont-css');
+iconfont    = require('gulp-iconfont');
+iconfontCss = require('gulp-iconfont-css');
 
 var runTimestamp = Math.round(Date.now()/1000);
+
 /*--Paths--*/
 paths = { 
   templates: ['./src/templates/**/*.html', '!./src/templates/blocks/**/*.html'],
-  tmp: './tmp/**/*.*'
+  tmp: './tmp/**/*.*',
+  svg: './src/svg/**/*.svg',
+  svgTemplate: './src/svg/icon-font',
+
 };
 
 buildPaths={
@@ -60,15 +64,15 @@ gulp.task('templates', ['insertHtml'], function(done) {
   return gulp.src(paths.tmp)
   .pipe(gulp.dest(buildPaths.app));
 });
-/*
+
 gulp.task('Iconfont', function(){
-    return gulp.src(('.svg'))  //путь где лежат иконки
+    return gulp.src(paths.svg)  //путь где лежат иконки
         .pipe(iconfontCss({
             fontName: 'doczilla-icons',
-            cssClass: 'icon',
-            path: '/icon-font', //путь до шаблона стилей 
-            targetPath: '', //путь вывода sass стилей иконок
-            fontPath: ''//путь где лежат скомпиленные шрифты
+            cssClass: 'doc-icon',
+            path: paths.svgTemplate, //путь до шаблона стилей 
+            targetPath: './src/assets/styles/sass/_icon-fonts.scss', //путь вывода sass стилей иконок
+            fontPath: './src/assets/fonts/'//путь где лежат скомпиленные шрифты
         }))
         .pipe(iconfont({
             fontName: 'doczilla-icons', // required
@@ -76,10 +80,8 @@ gulp.task('Iconfont', function(){
             formats: ['ttf', 'eot', 'woff', 'svg'], // default, 'woff2' and 'svg' are available
             timestamp: runTimestamp // recommended to get consistent builds when watching files
         }))
-
-        .pipe(gulp.dest(path.join(conf.paths.src, '/resources/fonts/icons-font/')));
+        .pipe(gulp.dest('./src/assets/fonts/'));
 });
-*/
 
 /*===============================================================*/
 
