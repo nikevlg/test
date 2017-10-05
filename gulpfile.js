@@ -1,7 +1,7 @@
 'use strict';
 var gulp, gutil, browserSync, browserSyncInit, connect, 
 	watch, myWatch, replace, args, sourcemaps, path, 
-	paths, buildPaths,urlPaths, plumber, clean, rigger, 
+	paths, buildPaths, urlPaths, plumber, sequence, clean, rigger, 
 	rename, concat, sass, 	cleanCss, prefix, imagemin, 
 	iconfont, iconfontCss;
 
@@ -20,6 +20,7 @@ replace     = require('gulp-batch-replace');
 args        = require('yargs');
 sourcemaps  = require('gulp-sourcemaps');
 clean       = require('gulp-clean');
+sequence    = require('run-sequence');
 
 /*--Styles--*/
 sass        = require('gulp-sass'); 
@@ -41,11 +42,12 @@ paths = {
   tmp: './tmp/**/*.*',
   svg: './src/assets/svg/*.svg',
   svgTemplate: './src/assets/svg/icon-font',
-
+  scss: ['./src/assets/styles/sass/*.scss']
 };
 
-buildPaths={
-  app: './build/'
+buildPaths = {
+  app: './build/',
+  styles: './build/assets/css/'
 };
 
 /*--Tasks--*/
@@ -55,12 +57,12 @@ gulp.task('clean', function () {
 });
 
 gulp.task('insertHtml', function () {
-    gulp.src(paths.templates)
+    return gulp.src(paths.templates)
         .pipe(rigger())
         .pipe(gulp.dest('./tmp/'));
 });
 
-gulp.task('templates', ['insertHtml'], function(done) {
+gulp.task('templates', ['insertHtml'], function() {
   return gulp.src(paths.tmp)
   .pipe(gulp.dest(buildPaths.app));
 });
@@ -81,6 +83,12 @@ gulp.task('Iconfont', function(){
             timestamp: runTimestamp // recommended to get consistent builds when watching files
         }))
         .pipe(gulp.dest('./src/assets/fonts/'));
+});
+
+gulp.task('sass', function() {
+    return gulp.src(paths.scss)
+        .pipe(sass())
+        .pipe(gulp.dest(buildPaths.styles))
 });
 
 /*===============================================================*/
@@ -114,9 +122,16 @@ browserSyncInit = function(browser) {
   });
 };
 
-
 gulp.task('serve', ['watch', 'myWatch'], function() {
   browserSyncInit();
 });
-gulp.task('default', ['compile', 'serve', 'server']);
-gulp.task('compile', ['clean', 'templates']);
+
+
+gulp.task('compile', function (done) {
+    sequence('clean', 'templates', 'sass', done);
+});
+
+
+gulp.task('default', ['compile'], function () {
+    gulp.start(['serve', 'server']); 
+});
