@@ -46,16 +46,21 @@ paths = {
   tmp: './tmp/**/*.*',
   svg: './src/assets/svg/*.svg',
   svgTemplate: './src/assets/svg/icon-font',
-  scss: ['./src/assets/styles/sass/*.scss'],
+  scss: './src/assets/styles/sass/*.scss',
   scripts: ['./src/assets/scripts/*.js'],
-  docs: ['./src/assets/docs/*.*']
+  images: ['./src/assets/images/*.*'],
+  docs: ['./src/assets/docs/*.*'],
+  favicon: ['./src/favicon/*.*']
 };
 
 buildPaths = {
   app: './build/',
   styles: './build/assets/css/',
   scripts: './build/assets/js/',
-  docs: './build/assets/docs/'
+  docs: './build/assets/docs/',
+  images: './build/assets/images/',
+  fonts: './build/assets/fonts/',
+  favicon: './build/favicon/'
 };
 
 /*--Tasks--*/
@@ -75,21 +80,14 @@ gulp.task('templates', ['insertHtml'], function() {
   .pipe(gulp.dest(buildPaths.app));
 });
 
-gulp.task('sass', function() {
-   return gulp.src(paths.scss).pipe(plumber()).pipe(sass()).on('error', sass.logError).pipe(prefix(['last 4 versions', 'ios_saf >= 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'])).pipe(cleanCss({
-    keepSpecialComments: 0
-  }))
-   .pipe(gulp.dest(buildPaths.styles))
-});
-
 gulp.task('Iconfont', function(){
     return gulp.src(paths.svg)  //путь где лежат иконки
         .pipe(iconfontCss({
             fontName: 'doczilla-icons',
             cssClass: 'doc-icon',
             path: paths.svgTemplate, //путь до шаблона стилей 
-            targetPath: '../styles/sass/_icon-fonts.scss', //путь вывода sass стилей иконок
-            fontPath: '../../fonts/'//путь где лежат скомпиленные шрифты
+            targetPath: '../_icon-fonts.scss', //путь вывода sass стилей иконок (от gulp.dest())
+            fontPath: '../fonts/'//путь где лежат скомпиленные шрифты
         }))
         .pipe(iconfont({
             fontName: 'doczilla-icons',
@@ -97,7 +95,22 @@ gulp.task('Iconfont', function(){
             formats: ['ttf', 'eot', 'woff', 'svg'], // default, 'woff2' and 'svg' are available
             timestamp: runTimestamp // recommended to get consistent builds when watching files
         }))
-        .pipe(gulp.dest('./src/assets/fonts/'));
+        .pipe(gulp.dest('./tmp/fonts'));
+});
+
+gulp.task('sass', function() {
+   return gulp.src(paths.scss)
+   .pipe(plumber())
+   .pipe(sass()).on('error', sass.logError)
+   .pipe(prefix(['last 4 versions', 'ios_saf >= 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']))
+   .pipe(cleanCss({
+    keepSpecialComments: 0
+  }))
+   .pipe(gulp.dest(buildPaths.styles))
+});
+
+gulp.task('fonts', function() {
+  return gulp.src('./tmp/fonts/*.*').pipe(gulp.dest(buildPaths.fonts));
 });
 
 gulp.task('js', function() {
@@ -114,11 +127,19 @@ gulp.task('js', function() {
   .pipe(gulp.dest(buildPaths.scripts));
 });
 
+gulp.task('images', function() {
+  return gulp.src(paths.images)
+  .pipe(imagemin())
+  .pipe(gulp.dest(buildPaths.images));
+});
+
+gulp.task('favicon', function() {
+  return gulp.src(paths.favicon).pipe(gulp.dest(buildPaths.app));
+});
+
 gulp.task('docs', function() {
   return gulp.src(paths.docs).pipe(gulp.dest(buildPaths.docs));
 });
-
-/*===============================================================*/
 
 gulp.task('watch', function() { 
   gulp.watch(paths.templates);
@@ -126,15 +147,15 @@ gulp.task('watch', function() {
 });
 
 gulp.task('myWatch', function() {
-  return gulp.watch(['./build/'], function() {
-    return gulp.src('./build/')
+  return gulp.watch([buildPaths.app], function() {
+    return gulp.src(buildPaths.app)
         .pipe(browserSync.stream());
     });
 });
 
 gulp.task('server', function() {
   return connect.server({
-    root: ['./build'],
+    root: [buildPaths.app],
     port: 4000
   });
 });
@@ -154,7 +175,7 @@ gulp.task('serve', ['watch', 'myWatch'], function() {
 });
 
 gulp.task('compile', function (done) {
-    sequence('clean', 'templates', 'sass', 'js', 'docs', done);
+    sequence('clean', 'templates', 'Iconfont', 'fonts', 'sass', 'js', 'images', 'favicon', 'docs', done);
 });
 
 gulp.task('default', ['compile'], function () {
