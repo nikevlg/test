@@ -17,6 +17,7 @@
     "gulp-iconfont": "^8.0.1",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-imagemin": "^3.3.0",
+    "gulp-minify": "^1.0.0",
     "gulp-path": "^3.0.3",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
