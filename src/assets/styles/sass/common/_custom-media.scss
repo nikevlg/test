@@ -1,0 +1,24 @@
+/* @mixin phone {
+  @media all and (max-width: $mobile-breakpoint){
+    @content
+  }
+}
+
+@mixin desktop {
+  @media all and (min-width: $mobile-breakpoint+1) {
+    @content
+  }
+}
+
+.phone-hidden {
+  @include phone() {
+    display: none !important;
+  }
+} 
+
+.desktop-hidden {
+  @include desktop() {
+    display: none !important;
+  }
+}
+ */

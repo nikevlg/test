@@ -3,7 +3,7 @@ var gulp, gutil, browserSync, browserSyncInit, connect,
 	watch, myWatch, replace, args, sourcemaps, path, 
 	paths, buildPaths, urlPaths, plumber, sequence, clean, rigger, 
 	rename, concat, sass, 	cleanCss, prefix, imagemin, 
-	iconfont, iconfontCss, minify;
+	iconfont, iconfontCss, uglify;
 
 /*--Utils--*/
 gulp        = require('gulp');
@@ -28,7 +28,7 @@ cleanCss    = require('gulp-clean-css');
 prefix      = require('gulp-autoprefixer');
 
 /*--Js--*/
-minify = require('gulp-minify');
+uglify = require('gulp-uglify');
 
 /*--Images--*/
 imagemin    = require('gulp-imagemin');
@@ -36,7 +36,6 @@ imagemin    = require('gulp-imagemin');
 /*--svg Icons--*/
 iconfont    = require('gulp-iconfont');
 iconfontCss = require('gulp-iconfont-css');
-
 
 var runTimestamp = Math.round(Date.now()/1000);
 
@@ -46,11 +45,14 @@ paths = {
   tmp: './tmp/**/*.*',
   svg: './src/assets/svg/*.svg',
   svgTemplate: './src/assets/svg/icon-font',
-  scss: './src/assets/styles/sass/*.scss',
+  scss: './src/assets/styles/sass/**/*.scss',
   scripts: ['./src/assets/scripts/*.js'],
   images: ['./src/assets/images/*.*'],
   docs: ['./src/assets/docs/*.*'],
-  favicon: ['./src/favicon/*.*']
+  favicon: ['./src/favicon/*.*'],
+  fonts: './src/assets/fonts/*.*',
+  sasslibs: ['./src/libs/**/*.css', './src/libs/**/*.sass', './src/libs/**/*.scss', '!./src/libs/**/*.min.css'],
+  scriptslibs: ['./src/libs/**/*.js', '!./src/libs/**/*.min.js'],
 };
 
 buildPaths = {
@@ -109,23 +111,39 @@ gulp.task('sass', function() {
    .pipe(gulp.dest(buildPaths.styles))
 });
 
-gulp.task('fonts', function() {
-  return gulp.src('./tmp/fonts/*.*').pipe(gulp.dest(buildPaths.fonts));
+gulp.task('sass-libs', function() {
+   return gulp.src(paths.sasslibs)
+   .pipe(plumber())
+   .pipe(sass()).on('error', sass.logError)
+   .pipe(prefix(['last 4 versions', 'ios_saf >= 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']))
+   .pipe(cleanCss({
+    keepSpecialComments: 0
+  }))
+   .pipe(concat('vendor.css'))
+   .pipe(gulp.dest(buildPaths.styles))
 });
+
+
+gulp.task('fonts', function() {
+  return gulp.src(['./tmp/fonts/*.*', paths.fonts]).pipe(gulp.dest(buildPaths.fonts));
+});
+
 
 gulp.task('js', function() {
   return gulp.src(paths.scripts)
-  .pipe(concat('scripts.js'))
-  .pipe(minify({
-        ext:{
-            src:'-debug.js', //версия для отладки
-            min:'.min.js'//минифицированная версия 
-        },
-        exclude: ['tasks'], //исключить каталог
-        ignoreFiles: ['-min.js']  //исключить расширения
-    }))
+  .pipe(uglify())
+  .pipe(concat('scripts.min.js'))
   .pipe(gulp.dest(buildPaths.scripts));
 });
+
+
+gulp.task('js-libs', function() {
+  return gulp.src(paths.scriptslibs)
+  .pipe(uglify())
+  .pipe(concat('vendor.min.js'))  
+  .pipe(gulp.dest(buildPaths.scripts));
+});
+
 
 gulp.task('images', function() {
   return gulp.src(paths.images)
@@ -175,7 +193,7 @@ gulp.task('serve', ['watch', 'myWatch'], function() {
 });
 
 gulp.task('compile', function (done) {
-    sequence('clean', 'templates', 'Iconfont', 'fonts', 'sass', 'js', 'images', 'favicon', 'docs', done);
+    sequence('clean', 'templates', 'Iconfont', 'fonts', 'sass', 'sass-libs', 'js', 'js-libs', 'images', 'favicon', 'docs', done);
 });
 
 gulp.task('default', ['compile'], function () {
