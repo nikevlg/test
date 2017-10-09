@@ -3,7 +3,7 @@ var gulp, gutil, browserSync, browserSyncInit, connect,
 	watch, myWatch, replace, args, sourcemaps, path, 
 	paths, buildPaths, urlPaths, metaTags, plumber, sequence, clean, rigger, 
 	rename, concat, sass, 	cleanCss, prefix, imagemin, 
-	iconfont, iconfontCss, uglify;
+	iconfont, runTimestamp, iconfontCss, uglify, rename;
 
 /*--Utils--*/
 gulp        = require('gulp');
@@ -21,7 +21,6 @@ args        = require('yargs');
 sourcemaps  = require('gulp-sourcemaps');
 clean       = require('gulp-clean');
 sequence    = require('run-sequence');
-
 /*--Styles--*/
 sass        = require('gulp-sass'); 
 cleanCss    = require('gulp-clean-css');
@@ -36,8 +35,7 @@ imagemin    = require('gulp-imagemin');
 /*--svg Icons--*/
 iconfont    = require('gulp-iconfont');
 iconfontCss = require('gulp-iconfont-css');
-
-var runTimestamp = Math.round(Date.now()/1000);
+runTimestamp = Math.round(Date.now()/1000);
 
 /*--Paths--*/
 paths = { 
@@ -99,6 +97,14 @@ metaTags = {
 
 
 /*--Tasks--*/
+gulp.task('jquery', function () {
+    return gulp.src('./node_modules/jquery/src')
+        .pipe(jquery({
+            flags: ['-deprecated', '-event/alias', '-ajax/script', '-ajax/jsonp', '-exports/global']
+        }))
+        .pipe(gulp.dest('./build/'));
+});
+
 gulp.task('robots-sitemap', function() {
   var version = args.argv.mode === 'test' ? 'test' : 'prod';
   if (version === 'prod') {
@@ -168,11 +174,16 @@ gulp.task('sass-libs', function() {
    .pipe(gulp.dest(buildPaths.styles))
 });
 
-
-gulp.task('fonts', function() {
-  return gulp.src(['./tmp/fonts/*.*', paths.fonts]).pipe(gulp.dest(buildPaths.fonts));
+gulp.task('fontslibs', function() {
+  return gulp.src(['./src/libs/**/*.eot', './src/libs/**/*.ttf', './src/libs/**/*.woff', './src/libs/**/*.woff2', './src/libs/**/*.svg', './src/libs/**/*.otf'])
+  .pipe(rename({dirname: ''}))
+  .pipe(gulp.dest('./tmp/fonts'));
 });
 
+gulp.task('fonts', function() {
+  return gulp.src(['./tmp/fonts/*.*', paths.fonts])
+  .pipe(gulp.dest(buildPaths.fonts));
+});
 
 gulp.task('js', function() {
   var version = args.argv.mode == 'test' ? 'test' : 'prod';
@@ -241,7 +252,7 @@ gulp.task('serve', ['watch', 'myWatch'], function() {
 });
 
 gulp.task('compile', function (done) {
-    sequence('clean', 'templates', 'Iconfont', 'fonts', 'sass', 'sass-libs', 'js', 'js-libs', 'images', 'favicon', 'robots-sitemap', 'docs', done);
+    sequence('clean', 'templates', 'Iconfont', 'fontslibs', 'fonts', 'sass', 'sass-libs', 'js', 'js-libs', 'images', 'favicon', 'robots-sitemap', 'docs', done);
 });
 
 gulp.task('default', ['compile'], function () {

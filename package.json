@@ -26,6 +26,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
+    "jquery": "^3.2.1",
     "run-sequence": "^2.2.0",
     "yargs": "^9.0.1"
   }
