@@ -1,7 +1,7 @@
 'use strict';
 var gulp, gutil, browserSync, browserSyncInit, connect, 
 	watch, myWatch, replace, args, sourcemaps, path, 
-	paths, buildPaths, urlPaths, plumber, sequence, clean, rigger, 
+	paths, buildPaths, urlPaths, metaTags, plumber, sequence, clean, rigger, 
 	rename, concat, sass, 	cleanCss, prefix, imagemin, 
 	iconfont, iconfontCss, uglify;
 
@@ -65,15 +65,60 @@ buildPaths = {
   favicon: './build/favicon/'
 };
 
+// Urls in build modes
+urlPaths = {
+  prod: [
+    ['DYNAMIC_URL_PROMO_PAGE', 'https://doczilla.ru'],
+    ['DYNAMIC_URL_REQUEST_API', 'https://forms.doczilla.ru'],
+    ['DYNAMIC_URL_FREE_FORMS', 'https://forms.doczilla.ru/#/Branch/free'],
+    ['DYNAMIC_URL_MAIN_PAGE', 'https://forms.doczilla.ru/'],
+    ['DYNAMIC_URL_ADVICES', 'https://forms.doczilla.ru/#/bookAdvice'],
+    ['DYNAMIC_URL_USER_HELP', 'https://forms.doczilla.ru/#/userHelp#0&1']
+  ],
+  test: [
+    ['DYNAMIC_URL_PROMO_PAGE', 'https://promo.obt-vlg.ru'],
+    ['DYNAMIC_URL_REQUEST_API', 'https://doczilla.obt-vlg.ru'],
+    ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.obt-vlg.ru/#/Branch/free'],
+    ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru/'],
+    ['DYNAMIC_URL_ADVICES', 'https://doczilla.obt-vlg.ru/#/bookAdvice'],
+    ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/#/userHelp#0&1']
+  ]
+};
+
+// Meta-tags in build modes
+metaTags = {
+  prod: [
+    [/<!-- ONLY_FOR_PROD_STARTS-->([\s\S]*?)<!-- ONLY_FOR_PROD_ENDS-->/g, '$1'],
+    [/<!-- ONLY_FOR_TEST_STARTS-->([\s\S]*?)<!-- ONLY_FOR_TEST_ENDS-->/g, '']
+  ],
+  test: [
+    [/<!-- ONLY_FOR_PROD_STARTS-->([\s\S]*?)<!-- ONLY_FOR_PROD_ENDS-->/g, ''],
+    [/<!-- ONLY_FOR_TEST_STARTS-->([\s\S]*?)<!-- ONLY_FOR_TEST_ENDS-->/g, '$1']
+  ]
+};
+
+
 /*--Tasks--*/
+gulp.task('robots-sitemap', function() {
+  var version = args.argv.mode === 'test' ? 'test' : 'prod';
+  if (version === 'prod') {
+    return gulp.src(['./src/robots.txt', './src/sitemap.xml']).pipe(gulp.dest('./build/'));
+  }
+});
+
 gulp.task('clean', function () {  
     return gulp.src(['build','tmp'], {read: false})
         .pipe(clean()); 
 });
 
 gulp.task('insertHtml', function () {
+  var version = args.argv.mode == 'test' ? 'test' : 'prod';
+  var urlReplacement = urlPaths[version];
+  var metaTagsReplacement = metaTags[version];
     return gulp.src(paths.templates)
         .pipe(rigger())
+        .pipe(replace(urlReplacement))
+        .pipe (replace (metaTagsReplacement))
         .pipe(gulp.dest('./tmp/'));
 });
 
@@ -130,7 +175,10 @@ gulp.task('fonts', function() {
 
 
 gulp.task('js', function() {
+  var version = args.argv.mode == 'test' ? 'test' : 'prod';
+  var urlReplacement = urlPaths[version]
   return gulp.src(paths.scripts)
+  .pipe(replace(urlReplacement))
   .pipe(uglify())
   .pipe(concat('scripts.min.js'))
   .pipe(gulp.dest(buildPaths.scripts));
@@ -193,9 +241,14 @@ gulp.task('serve', ['watch', 'myWatch'], function() {
 });
 
 gulp.task('compile', function (done) {
-    sequence('clean', 'templates', 'Iconfont', 'fonts', 'sass', 'sass-libs', 'js', 'js-libs', 'images', 'favicon', 'docs', done);
+    sequence('clean', 'templates', 'Iconfont', 'fonts', 'sass', 'sass-libs', 'js', 'js-libs', 'images', 'favicon', 'robots-sitemap', 'docs', done);
 });
 
 gulp.task('default', ['compile'], function () {
     gulp.start(['serve', 'server']); 
 });
+
+
+
+// gulp - собрать промо
+// gulp --mode test - собрать тестовую версию промо
