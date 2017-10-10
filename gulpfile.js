@@ -218,17 +218,44 @@ gulp.task('docs', function() {
   return gulp.src(paths.docs).pipe(gulp.dest(buildPaths.docs));
 });
 
-gulp.task('watch', function() { 
-  gulp.watch(paths.templates);
-  return gulp.watch(paths.templates, ['templates']);
+
+// watch
+function isOnlyChange(event) {
+    return event.type === 'changed';
+}
+
+gulp.task('html-reload', ['templates'], function() {
+    browserSync.reload();
+});
+gulp.task('js-reload', ['js'], function() {
+    browserSync.reload();
+});
+gulp.task('css-reload', ['sass'], function() {
+    browserSync.reload();
+});
+
+
+gulp.task('watch', function(){ 
+ // gulp.watch(paths.templates, 'inject-reload', ['templates']);
+  gulp.watch(paths.scss, ['css-reload']);
+  // gulp.watch(paths.scss), function(event) {
+  //   if(isOnlyChange(event)) {
+  //     gulp.start('css-reload');
+  //     //return gulp.watch(paths.templates, ['templates']);
+  //   }
+  //   else{
+        
+  //     }
+  // }
 });
 
 gulp.task('myWatch', function() {
-  return gulp.watch([buildPaths.app], function() {
+  return gulp.watch([buildPaths.app + '**/*'], function() {
     return gulp.src(buildPaths.app)
         .pipe(browserSync.stream());
     });
 });
+
 
 gulp.task('server', function() {
   return connect.server({
