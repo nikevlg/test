@@ -10,7 +10,7 @@ gulp        = require('gulp');
 gutil       = require('gulp-util');
 rename      = require('gulp-rename');
 path        = require('path');
-browserSync = require('browser-sync');
+browserSync = require('browser-sync').create();
 connect     = require('gulp-connect');
 watch       = require('gulp-watch');
 rigger      = require('gulp-rigger');
@@ -40,6 +40,7 @@ runTimestamp = Math.round(Date.now()/1000);
 /*--Paths--*/
 paths = { 
   templates: ['./src/templates/**/*.html', '!./src/templates/blocks/**/*.html'],
+  templateswatch: './src/templates/**/*.html',
   tmp: './tmp/**/*.*',
   svg: './src/assets/svg/*.svg',
   svgTemplate: './src/assets/svg/icon-font',
@@ -218,75 +219,42 @@ gulp.task('docs', function() {
   return gulp.src(paths.docs).pipe(gulp.dest(buildPaths.docs));
 });
 
-
-// watch
-function isOnlyChange(event) {
-    return event.type === 'changed';
-}
-
-gulp.task('html-reload', ['templates'], function() {
-    browserSync.reload();
-});
-gulp.task('js-reload', ['js'], function() {
-    browserSync.reload();
-});
-gulp.task('css-reload', ['sass'], function() {
-    browserSync.reload();
-});
-
-
-gulp.task('watch', function(){ 
- // gulp.watch(paths.templates, 'inject-reload', ['templates']);
-  gulp.watch(paths.scss, ['css-reload']);
-  // gulp.watch(paths.scss), function(event) {
-  //   if(isOnlyChange(event)) {
-  //     gulp.start('css-reload');
-  //     //return gulp.watch(paths.templates, ['templates']);
-  //   }
-  //   else{
-        
-  //     }
-  // }
-});
-
-gulp.task('myWatch', function() {
-  return gulp.watch([buildPaths.app + '**/*'], function() {
-    return gulp.src(buildPaths.app)
-        .pipe(browserSync.stream());
+gulp.task('server', function() {
+  connect.server({
+      root: ['./build/'],
+      port: 4000
     });
 });
 
-
-gulp.task('server', function() {
-  return connect.server({
-    root: [buildPaths.app],
-    port: 4000
-  });
-});
-
-browserSyncInit = function(browser) {
-  browser = browser === void 0 ? 'default' : browser;
-  browserSync.instance = browserSync.init({
-    startPath: '/',
-    browser: browser,
-    port: '4000',
-    proxy: 'http://localhost:4000/'
-  });
-};
-
-gulp.task('serve', ['watch', 'myWatch'], function() {
-  browserSyncInit();
-});
-
 gulp.task('compile', function (done) {
-    sequence('clean', 'templates', 'Iconfont', 'fontslibs', 'fonts', 'sass', 'sass-libs', 'js', 'js-libs', 'images', 'favicon', 'robots-sitemap', 'docs', done);
+    sequence('clean', 'templates', 'Iconfont', 'fontslibs', 'fonts', 'sass', 'sass-libs', 'js', 'js-libs', 
+             'images', 'favicon', 'robots-sitemap', 'docs', done);
 });
 
-gulp.task('default', ['compile'], function () {
-    gulp.start(['serve', 'server']); 
+gulp.task('default', ['compile', 'server'], function () {
+    gulp.start(['watch']); 
 });
 
+gulp.task('watch', function() {
+  browserSync.init({
+        port: '4000',
+        server: "./build"
+    });
+  gulp.watch(paths.scss, ['sass']).on('change', browserSync.reload);
+  gulp.watch(paths.scripts, ['js']).on('change', browserSync.reload);
+  gulp.watch(paths.images, ['images-reload']);
+  gulp.watch(paths.templateswatch, ['template-reload']);
+});
 
+gulp.task('template-reload', ['templates'], function(done) {
+  browserSync.reload();
+  done();
+})
+
+gulp.task('images-reload', ['images'], function(done) { //не работает на добавление картинок
+  browserSync.reload();
+  done();
+})
 
 // gulp - собрать промо
 // gulp --mode test - собрать тестовую версию промо
