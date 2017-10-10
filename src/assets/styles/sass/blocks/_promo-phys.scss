@@ -1,15 +1,4 @@
 .promo{
-	background-color: #ccc;
-	  @include Xlarge-screen() {
-	  		background-color: green;  
-	  }  
- 	  @include large-screen() {
-			background-color: yellow;  
-		} 
-	 @include medium-screen () {
-			background-color: orange;  
-	}  
-	@include small-screen() { 
-			background-color: red;  
-	} 
+	height: 200px;
+	background-color: $color-base;
 }
