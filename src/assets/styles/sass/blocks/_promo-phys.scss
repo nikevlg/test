@@ -1,4 +1,8 @@
 .promo{
-	height: 200px;
-	background-color: $color-base;
+	padding-top: 100px;
+	.temp1{
+		width: 100% !important;
+		height: 300px;
+		background-color: #ccc;
+	}
 }

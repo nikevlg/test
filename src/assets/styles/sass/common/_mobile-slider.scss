@@ -1,0 +1,16 @@
+.mobile-slider{
+	.content-slide{
+		width: 100%;
+		height: auto;
+	}
+	li[data-uk-slideset-item]{
+		width: 20px;
+		a{ 
+			background-color: #c1c1c1;			
+		}
+		&.uk-active>*{
+			background-color: #6699CC;
+			transform: scale(1);
+		}
+	}
+} 

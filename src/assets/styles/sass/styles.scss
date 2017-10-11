@@ -8,9 +8,10 @@
 // Common
 @import '../../../../tmp/_icon-fonts';
 @import 'common/typography';
+@import 'common/mobile-slider';
 
 // Blocks
-@import 'blocks/_promo-phys'; 
-@import 'blocks/_temp'; 
-@import 'blocks/_navigate';
-@import 'blocks/_footer';
+@import 'blocks/promo-phys'; 
+@import 'blocks/temp'; 
+@import 'blocks/navigate';
+@import 'blocks/footer';
