@@ -16,6 +16,10 @@
 })(function(UI) {
 
     "use strict";
+    if (UI.slideshow == null) {
+        UI.slideshow = {};
+        UI.slideshow.animations = {};
+    }
 
     var Animations = UI.slideshow.animations;
 

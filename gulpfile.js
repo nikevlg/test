@@ -51,7 +51,7 @@ paths = {
   favicon: ['./src/favicon/*.*'],
   fonts: './src/assets/fonts/*.*',
   sasslibs: ['./src/libs/**/*.css', './src/libs/**/*.sass', './src/libs/**/*.scss', '!./src/libs/**/*.min.css'],
-  scriptslibs: ['./src/libs/**/*.js', '!./src/libs/**/*.min.js'],
+  scriptslibs: ['./src/libs/**/*.js', '!./src/libs/**/*.min.js']
 };
 
 buildPaths = {
@@ -98,13 +98,6 @@ metaTags = {
 
 
 /*--Tasks--*/
-gulp.task('jquery', function () {
-    return gulp.src('./node_modules/jquery/src')
-        .pipe(jquery({
-            flags: ['-deprecated', '-event/alias', '-ajax/script', '-ajax/jsonp', '-exports/global']
-        }))
-        .pipe(gulp.dest('./build/'));
-});
 
 gulp.task('robots-sitemap', function() {
   var version = args.argv.mode === 'test' ? 'test' : 'prod';

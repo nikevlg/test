@@ -1,6 +1,8 @@
 .navigate{
-		padding-top: 11px;
-		padding-bottom: 11px;
+	position: fixed;
+	width: 100%;
+	padding-top: 11px;
+	padding-bottom: 11px;
 	.uk-navbar-brand {
 		width: 170px;
 		padding: 0;  
@@ -17,7 +19,5 @@
 	}
 	&__login{
 		margin-left: 15px; 
-
-
 	}
 }
