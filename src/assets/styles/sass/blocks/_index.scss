@@ -1,0 +1,15 @@
+/* main[role="main"]{
+	@include medium-screen(){
+		padding: 0;
+	}	
+	@include small-screen(){
+		padding: 0;
+	}
+} */
+
+a{
+	text-decoration: underline;
+	&:hover{
+		text-decoration: none;
+	}
+} 
