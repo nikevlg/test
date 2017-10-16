@@ -3,20 +3,16 @@
 		width: 100%;
 		height: auto;
 	}
-	li[data-uk-slideset-item]{
-		width: 20px;
-		a{ 
-			background-color: #c1c1c1;			
-		}
-		&.uk-active>*{
-			background-color: #6699CC;
-			transform: scale(1);
+	.uk-dotnav{
+		li{
+			width: 20px;
+			a{ 
+				background-color: #c1c1c1;			
+			}
+			&.uk-active>*{
+				background-color: #6699CC;
+				transform: scale(1);
+			}
 		}
 	}
-
 } 
-.temp1{
-	width: 100% !important;
-	height: 300px;
-	background-color: #ccc;
-}

@@ -1,0 +1,44 @@
+
+.video{
+	&__mobile {		
+		position: relative;	
+		&__screen{
+			position: relative;
+			width: 100%;
+			height: calc(100vh - 80px);
+			min-height: 300px;
+			background-image: url(/assets/images/Vertical_1.1.jpg); 
+			background-position: center;
+			&--albom{
+				background-image: url(/assets/images/Horizontal_1.1.jpg);
+			}  
+			&.in-play {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+		&__play-btn {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 56px;
+			height: 56px;
+			background-image: url(/assets/images/play3.png);
+			transform: translate(-50%, -50%);
+			background-size: cover;
+			cursor: pointer;
+			transition: background-color .2s;
+			border-radius: 50%;
+
+		}
+		iframe{
+			position: absolute;
+			top: 0;
+			left: 0; 
+			z-index: -1;
+			width: 100%;
+			height: calc(100vh - 80px);
+			min-height: 300px;
+		}
+	}	 
+}
