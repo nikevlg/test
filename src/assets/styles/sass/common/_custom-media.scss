@@ -1,20 +1,20 @@
  @mixin Xlarge-screen {
-  @media all and (max-width: $mobile-breakpoint-max){
+  @media all and (min-width: $mobile-breakpoint-max){
     @content
   }
 }
  @mixin large-screen {
-  @media all and (max-width: $mobile-breakpoint-large){
+  @media all and (min-width: $mobile-breakpoint-large) and (max-width: $mobile-breakpoint-max){
     @content
   }
 }
  @mixin medium-screen {
-  @media all and (max-width: $mobile-breakpoint-medium){
+  @media all and (min-width: $mobile-breakpoint-medium) and (max-width: $mobile-breakpoint-large){
     @content
   }
 }
  @mixin small-screen {
-  @media all and (max-width: $mobile-breakpoint-small){
+  @media all and (mmin-width: $mobile-breakpoint-small) and (max-width: $mobile-breakpoint-medium) {
     @content
   }
 }

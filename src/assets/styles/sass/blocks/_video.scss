@@ -40,5 +40,26 @@
 			height: calc(100vh - 80px);
 			min-height: 300px;
 		}
-	}	 
+	}	
+	&__desctop{
+		&__wrapper{
+			margin: 40px auto;
+			@include Xlarge-screen(){
+				width: 95%;
+				height: 550px;
+			}
+			@include large-screen(){
+				width: 95%;
+				height: 550px;
+			}	
+			@include medium-screen(){
+				width: 95%;
+				height: 550px;
+			}		
+			iframe{
+				width: 100%;
+				height: 100%;
+			}
+		}		
+	} 
 }
