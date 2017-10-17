@@ -30,7 +30,7 @@ window.onYouTubePlayerAPIReady = function() {
     events: {
       'onReady': onPlayerReady
     }
-  });
+  })
 };
 
 onPlayerReady = function() {
