@@ -240,7 +240,10 @@ gulp.task('compile', function (done) {
 });
 
 gulp.task('default', ['compile', 'server'], function () {
-    gulp.start(['watch']); 
+    var version = args.argv.mode === 'prod' ? 'prod':'test';
+      if (version !== 'prod') {
+          gulp.start(['watch']); 
+      }; 
 });
 
 gulp.task('watch', function() {
@@ -254,7 +257,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.templateswatch, ['template-reload']);
 });
 
-gulp.task('template-reload', ['templates'], function(done) {
+gulp.task('template-reload', ['templates'], function(done) {   
   browserSync.reload();
   done();
 })
@@ -265,4 +268,4 @@ gulp.task('images-reload', ['images'], function(done) { //не работает 
 })
 
 // gulp - собрать test
-// gulp --mode prod - собрать prod версию 
+// gulp --mode prod - собрать prod версию  (без автозапуска на 4000 порту)
