@@ -3,7 +3,7 @@ var gulp, gutil, browserSync, browserSyncInit, connect,
 	watch, myWatch, replace, args, sourcemaps, path, 
 	paths, buildPaths, urlPaths, metaTags, plumber, sequence, clean, rigger, 
 	rename, concat, sass, 	cleanCss, prefix, imagemin, 
-	iconfont, runTimestamp, iconfontCss, uglify, rename;
+	iconfont, runTimestamp, iconfontCss, uglify, rename, htmlmin;
 
 /*--Utils--*/
 gulp        = require('gulp');
@@ -21,6 +21,7 @@ args        = require('yargs');
 sourcemaps  = require('gulp-sourcemaps');
 clean       = require('gulp-clean');
 sequence    = require('run-sequence');
+htmlmin     = require('gulp-htmlmin');
 /*--Styles--*/
 sass        = require('gulp-sass'); 
 cleanCss    = require('gulp-clean-css');
@@ -81,6 +82,14 @@ urlPaths = {
     ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru/'],
     ['DYNAMIC_URL_ADVICES', 'https://doczilla.obt-vlg.ru/#/bookAdvice'],
     ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/#/userHelp#0&1']
+  ],
+  dev: [
+    ['DYNAMIC_URL_PROMO_PAGE', 'https://promo.obt-vlg.ru'],
+    ['DYNAMIC_URL_REQUEST_API', 'https://doczilla.obt-vlg.ru'],
+    ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.obt-vlg.ru/#/Branch/free'],
+    ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru/'],
+    ['DYNAMIC_URL_ADVICES', 'https://doczilla.obt-vlg.ru/#/bookAdvice'],
+    ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/#/userHelp#0&1']
   ]
 };
 
@@ -100,10 +109,10 @@ metaTags = {
 /*--Tasks--*/
 
 gulp.task('robots-sitemap', function() {
-  var version = args.argv.mode === 'test' ? 'test' : 'prod';
+  var version = args.argv.mode === 'prod' ? 'prod':'test';
   if (version === 'prod') {
-    return gulp.src(['./src/robots.txt', './src/sitemap.xml']).pipe(gulp.dest('./build/'));
-  }
+    return gulp.src(['./src/robots.txt', './src/sitemap.xml']).pipe(gulp.dest('./build/prod/'));
+  };
 });
 
 gulp.task('clean', function () {  
@@ -112,7 +121,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('insertHtml', function () {
-  var version = args.argv.mode == 'test' ? 'test' : 'prod';
+  var version = args.argv.mode === 'prod' ? 'prod':'test';
   var urlReplacement = urlPaths[version];
   var metaTagsReplacement = metaTags[version];
     return gulp.src(paths.templates)
@@ -123,6 +132,12 @@ gulp.task('insertHtml', function () {
 });
 
 gulp.task('templates', ['insertHtml'], function() {
+  var version = args.argv.mode === 'prod' ? 'prod':'test';
+  if (version === 'prod') {
+        return gulp.src(paths.tmp)
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest(buildPaths.app));
+   };
   return gulp.src(paths.tmp)
   .pipe(gulp.dest(buildPaths.app));
 });
@@ -180,7 +195,7 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('js', function() {
-  var version = args.argv.mode == 'test' ? 'test' : 'prod';
+  var version = args.argv.mode === 'prod' ? 'prod':'test';
   var urlReplacement = urlPaths[version]
   return gulp.src(paths.scripts)
   .pipe(replace(urlReplacement))
@@ -249,5 +264,5 @@ gulp.task('images-reload', ['images'], function(done) { //не работает 
   done();
 })
 
-// gulp - собрать промо
-// gulp --mode test - собрать тестовую версию промо
+// gulp - собрать test
+// gulp --mode prod - собрать prod версию 
