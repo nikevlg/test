@@ -14,7 +14,7 @@
   }
 }
  @mixin small-screen {
-  @media all and (mmin-width: $mobile-breakpoint-small) and (max-width: $mobile-breakpoint-medium) {
+  @media all and (max-width: $mobile-breakpoint-medium) {
     @content
   }
 }
