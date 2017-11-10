@@ -9,7 +9,19 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Roboto-Light';
+	src: url('../fonts/roboto-light.woff2') format('woff2'),
+	url('../fonts/roboto-light.woff') format('woff'),
+	url('../fonts/roboto-light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 
+%roboto_light{
+	font-family: 'Roboto-Light';
+}
+ 
 body{
 	font-family: 'Roboto';
 }
