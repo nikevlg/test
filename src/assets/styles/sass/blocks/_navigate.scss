@@ -6,8 +6,8 @@
 .navigate{
 	position: fixed;
 	width: 100%;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	z-index: 12;
 	border-radius: 0 0 0 0 !important;
 	.uk-container{
@@ -28,17 +28,15 @@
 		padding: 3px 0; 
 	}
 	.phys_nav, .gos_nav, .yur_nav{ 
-		    padding: 13px 16px;
+		    padding: 16px;
 		a{
-			@extend %roboto_light;
 			font-size: 16px;
 		}
 	}
 	
 	&__phone{		
-		padding: 13px 0 !important;		
+		padding: 16px 0 !important;		
 		a{
-			@extend %roboto_light;
 			font-size: 16px;
 		}
 	}

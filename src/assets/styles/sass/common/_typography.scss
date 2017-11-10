@@ -1,29 +1,33 @@
-//
-// ROBOTO FONT
-//
 @font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/roboto-regular.woff2') format('woff2'),
-	url('../fonts/roboto-regular.woff') format('woff'),
-	url('../fonts/roboto-regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Roboto-Light';
-	src: url('../fonts/roboto-light.woff2') format('woff2'),
-	url('../fonts/roboto-light.woff') format('woff'),
-	url('../fonts/roboto-light.ttf') format('truetype');
+	font-family: 'Roboto-Regular';
+	src: url('../fonts/Roboto-Regular.eot');
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+	url('../fonts/Roboto-Regular.woff') format('woff'),
+	url('../fonts/Roboto-Regular.ttf') format('truetype'),
+	url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg'),
+	url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype');
 	font-weight: normal;
 	font-style: normal;
 }
 
-%roboto_light{
-	font-family: 'Roboto-Light';
+@font-face {
+	font-family: 'Roboto-Medium';
+	src: url('../fonts/Roboto-Medium.eot');
+	src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+	url('../fonts/Roboto-Medium.woff') format('woff'),
+	url('../fonts/Roboto-Medium.ttf') format('truetype'),
+	url('../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg'),
+	url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
 }
- 
+
 body{
-	font-family: 'Roboto';
+	font-family: 'Roboto-Regular';
+}
+
+%roboto_medium{
+	font-family: 'Roboto-Medium';
 }
 
 a.button {
@@ -75,8 +79,6 @@ a.button {
 		background-color: transparent;
 		border-color: $color-base-text;
 	}
-
-
 
 	&--block {
 		display: block;
