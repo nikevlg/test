@@ -45,10 +45,10 @@
 	        }
 	    }
 	@include Xlarge-screen (){
-		max-width: 1220px;	
+		//max-width: 1220px;	
 	}
 	@include large-screen (){
-		max-width: 980px;			
+		//max-width: 980px;			
 	}
 	@include medium-screen (){
 		.container{ 
