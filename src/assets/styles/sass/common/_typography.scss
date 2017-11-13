@@ -85,6 +85,7 @@ a.button {
 	}
 
 	&--green-hover:hover, &--green-hover:active {
+		color: #fff;
 		border-color: $color-green;
 		background-color: $color-green;
 	}

@@ -12,10 +12,10 @@
 		.left_block{
 			position: absolute;
 			left: 0;
-			top: 162px;
+			top: 90px;
 			max-width: 650px;
 			height: 400px;
-			margin-left: -15px;
+			margin-left: -25px;
 			h1{ 
 				@extend %roboto_medium;
 				margin: 10px 0;
@@ -39,7 +39,7 @@
 		.right_block{
 			position: absolute;
 			right: 0;
-			bottom: 60px;
+			bottom: 25px;
 			max-width: 600px;
 			height: 220px;
 			padding-right: 10px;
