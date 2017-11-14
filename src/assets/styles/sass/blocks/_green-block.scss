@@ -1,0 +1,16 @@
+.green-block{	
+	width: 100%;
+	min-height: 64px;
+	position: relative;
+	background-image: url(../images/green_bg.png);  
+	background-color: $color-green;
+	height: auto;
+	.container{			
+		height: auto;
+		padding: 30px;
+		text-align: center;
+		color: #fff;
+		line-height: 1.5;
+		font-size: 20px;		 
+	}	  
+}

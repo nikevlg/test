@@ -1,4 +1,5 @@
 .mobile-slider{
+	padding: 0 60px;
 	.content-slide{
 		width: 100%;
 		height: auto;
@@ -24,4 +25,12 @@
 			}
 		}
 	}
+	
+	.uk-slidenav-previous{
+		left: 0
+	}
+	.uk-slidenav-next{
+		right: 0;
+	}
 } 
+

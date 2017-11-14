@@ -59,7 +59,7 @@
 			margin-bottom: 16px;
 		}		
 	}
-	@include small-screen() {	  	
+	/* @include small-screen() {	  	
 		height: auto;
 		.container{			
 			height: auto;
@@ -69,5 +69,5 @@
 			line-height: 1.5;
 			font-size: 20px;		 
 		}	  
-	}
+	} */
 }
