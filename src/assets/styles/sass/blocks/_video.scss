@@ -5,6 +5,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66cc99', endColorstr='#4d79a3', GradientType=0 );
 	&__desctop{
 		margin-top: 60px;
+		margin-bottom: 50px;
 		&__title{
 			@extend %roboto_medium;
 			margin: 60px 0;   
