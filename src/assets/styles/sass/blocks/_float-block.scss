@@ -50,7 +50,9 @@
 	@include large-screen (){
 		//max-width: 980px;			
 	}
-	@include medium-screen (){
+	
+
+	@media all and (max-width: 980px){
 		.container{ 
 			padding-bottom: 16px;
 		}

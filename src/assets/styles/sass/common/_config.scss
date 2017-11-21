@@ -1,15 +1,17 @@
 // Colors
 $color-base: #6699cb;
-$color-alt: #6699cc;
-$color-base-yellow: #ffc644;
-$color-advanced: #b2cce5;
+$color-blue-dark: #2f6296;
 $color-base-text: #fff;
-$color-alt-text: #333333;
-$color-dark: #222222;
 $color-green: #66cc99;
-$color-red: #ff3300;
 
-$mobile-breakpoint-max: 1220px;
-$mobile-breakpoint-large: 960px;
-$mobile-breakpoint-medium: 767px;
+
+$mobile-breakpoint-max-start: 1219px;
+$mobile-breakpoint-max-end: 1220px;
+
+$mobile-breakpoint-large-start: 959px;
+$mobile-breakpoint-large-end: 960px;
+
+$mobile-breakpoint-medium-start: 766px;
+$mobile-breakpoint-medium-end: 767px;
+
 $mobile-breakpoint-small: 480px;

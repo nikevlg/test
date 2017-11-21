@@ -1,4 +1,5 @@
 .advantage{
+	box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
 	&__desctop{
 		&__block{
 			min-height: 350px;
@@ -11,7 +12,7 @@
 				margin: 40px 0 25px 0;
 				font-size: 20px;
 				line-height: 1.3;
-				color: #2f6296;
+				color:$color-blue-dark;
 			}
 			p{
 				font-size: 18px;
@@ -39,10 +40,10 @@
 		};	
 		&__block{
 			margin: 60px 21px 21px 21px;
+			padding: 25px 20px 40px 20px;
 			border-radius: 4px;
 			background-color: #fff;
-			padding: 25px 40px 40px 40px;
-			box-shadow: 0px 0px 21px 10px rgba(0,0,0,0.16);
+			box-shadow: 0px 0px 21px 8px rgba(0,0,0,0.16);
 			img{
 				width: 140px;
 				height: 140px;
@@ -52,7 +53,7 @@
 				margin: 30px 0 40px 0;
 				font-size: 36px;
 				line-height: 1.3;
-				color: #2f6296;
+				color: $color-blue-dark;
 			}
 			p{
 				font-size: 18px;
@@ -62,5 +63,8 @@
 		.uk-dotnav{
 			margin-top: 20px;
 		}
+		.mobile-slider {
+		    padding: 10px;
+		}
 	}
-}  
+}   

@@ -1,0 +1,49 @@
+.docs{	
+	&__desctop{
+		padding: 100px 10px;
+		.uk-grid{
+			background-color: #fff;
+		}
+
+
+		&__redirect{
+			h2{
+				@extend %roboto_medium;
+				font-size: 66px;
+				line-height: 1;
+				color: $color-blue-dark;
+			}
+			span{
+				font-size: 37px;
+				color: $color-base;
+			}
+			p{
+				font-size: 18px;
+				line-height: 1.5;
+				margin-bottom: 25px;
+			}
+			a{
+				width: 240px;
+			}
+		}
+		&__tags{
+			text-align: right; 
+			padding-top: 80px;
+			span{
+				@extend %roboto_medium;	
+				display: inline-block;
+				color: $color-base;
+				font-size: 18px;	
+				margin: 10px 15px;					
+			}
+		/* 	.hard{
+			font-size: 36px;
+			color:  $color-blue-dark;
+		} */
+
+		}
+	}
+	&__mobile{
+
+	}
+}

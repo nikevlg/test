@@ -1,20 +1,76 @@
  @mixin Xlarge-screen {
-  @media all and (min-width: $mobile-breakpoint-max){
+  @media all and (min-width: $mobile-breakpoint-max-end){
     @content
   }
 }
- @mixin large-screen {
-  @media all and (min-width: $mobile-breakpoint-large) and (max-width: $mobile-breakpoint-max){
+@mixin large-screen {
+  @media all and (min-width: $mobile-breakpoint-large) and (max-width: $mobile-breakpoint-max-start){
     @content
   }
 }
- @mixin medium-screen {
-  @media all and (min-width: $mobile-breakpoint-medium) and (max-width: $mobile-breakpoint-large){
+@mixin medium-screen {
+  @media all and (min-width: $mobile-breakpoint-medium) and (max-width: $mobile-breakpoint-large-start){
     @content
   }
 }
- @mixin small-screen {
+@mixin small-screen {
   @media all and (max-width: $mobile-breakpoint-medium) {
     @content
+  }
+}
+
+//только на максимальном разрешении
+.xl-v{
+  display: none;
+  @include Xlarge-screen(){
+    display: block;
+  }
+   @include large-screen(){
+    display: none;
+  }
+  @include medium-screen(){
+    display: none;
+  }
+}
+
+//только на большом разрешении
+.l-v{
+  display: none;
+  @include large-screen(){
+    display: block;
+  }
+  @include medium-screen(){
+    display: none;
+  }
+}
+//только на среднем разрешении
+.m-v{
+  display: none;
+  @include medium-screen(){
+    display: block;
+  }
+  @include large-screen(){
+    display: none;
+  }
+}
+
+//только на максимальном и большом разрешении
+.xl_l-v{
+  display: none;
+  @include Xlarge-screen(){
+    display: block;
+  }
+  @include large-screen(){
+    display: block;
+  }
+}
+//только на большом и среднем разрешении
+.l_m-v{
+  display: none;
+  @include large-screen(){
+    display: block;
+  }
+  @include medium-screen(){
+    display: block;
   }
 }

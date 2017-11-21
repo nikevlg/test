@@ -89,4 +89,10 @@ a.button {
 		border-color: $color-green;
 		background-color: $color-green;
 	}
+
+	&--green-hover-light:hover, &--green-hoverlight:active {
+		color: $color-green;
+		border-color: $color-green;
+		background-color: transparent;
+	}
 }

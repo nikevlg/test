@@ -32,5 +32,10 @@
 	.uk-slidenav-next{
 		right: 0;
 	}
+	@include small-screen(){
+		.uk-slidenav-previous, .uk-slidenav-next{
+			display: none !important;
+		}
+	};
 } 
 
