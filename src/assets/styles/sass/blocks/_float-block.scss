@@ -1,56 +1,55 @@
 .float-block{	
-	    width: 100%;
-		min-height: 64px;
-	    position: relative;
-	    background-image: url(../images/green_bg.png);  
-	    background-color: $color-green;
-	    .container {
-	    	min-height: 57px;
-    		padding-top: 16px; 	
-	    	color: #fff;
-	    	text-align: center;  
-	    	z-index: 1000; 
-	    } 
-	    .button {
-			margin-left: 40px;
-		    font-weight: 700;
-		    color: $color-green;
-		    border-color: #fff;
-		    background-color: #fff;
-		    &:hover {
-		        color: #fff;
-		        border-color: #fff;
-		        background-color: transparent;
-		    }
-    	}
-		&__fixed{
-				position: fixed;
-			    bottom: 0;
-			    z-index: 10000;
-			}
-		&__bottom{
-				position: absolute;
-			    bottom: 793px;
-			}		
-		.button {
-	    	margin-left: 40px;
-	        font-weight: 700;
-	        color: $color-green;
-	        border-color: #fff;
-	        background-color: #fff;
-	        &:hover {
-	            color: #fff;
-	            border-color: #fff;
-	            background-color: transparent;
-	        }
-	    }
+	width: 100%;
+	min-height: 64px;
+	position: relative;
+	background-image: url(../images/green_bg.png);  
+	background-color: $color-green;
+	.container {
+		min-height: 57px;
+		padding-top: 16px; 	
+		color: #fff;
+		text-align: center;  
+		z-index: 1000; 
+	} 
+	.button {
+		margin-left: 40px;
+		font-weight: 700;
+		color: $color-green;
+		border-color: #fff;
+		background-color: #fff;
+		&:hover {
+			color: #fff;
+			border-color: #fff;
+			background-color: transparent;
+		}
+	}
+	&__fixed{
+		position: fixed;
+		bottom: 0;
+		z-index: 10000;
+	}
+	&__bottom{
+		position: absolute;
+		bottom: 793px;
+	}		
+	.button {
+		margin-left: 40px;
+		font-weight: 700;
+		color: $color-green;
+		border-color: #fff;
+		background-color: #fff;
+		&:hover {
+			color: #fff;
+			border-color: #fff;
+			background-color: transparent;
+		}
+	}
 	@include Xlarge-screen (){
 		//max-width: 1220px;	
 	}
 	@include large-screen (){
 		//max-width: 980px;			
-	}
-	
+	}	
 
 	@media all and (max-width: 980px){
 		.container{ 
@@ -61,15 +60,5 @@
 			margin-bottom: 16px;
 		}		
 	}
-	/* @include small-screen() {	  	
-		height: auto;
-		.container{			
-			height: auto;
-			padding: 30px;
-			text-align: center;
-			color: #fff;
-			line-height: 1.5;
-			font-size: 20px;		 
-		}	  
-	} */
+	
 }

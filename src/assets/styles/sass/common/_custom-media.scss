@@ -4,17 +4,17 @@
   }
 }
 @mixin large-screen {
-  @media all and (min-width: $mobile-breakpoint-large) and (max-width: $mobile-breakpoint-max-start){
+  @media all and (min-width: $mobile-breakpoint-large-end) and (max-width: $mobile-breakpoint-max-start){
     @content
   }
 }
 @mixin medium-screen {
-  @media all and (min-width: $mobile-breakpoint-medium) and (max-width: $mobile-breakpoint-large-start){
+  @media all and (min-width: $mobile-breakpoint-medium-end) and (max-width: $mobile-breakpoint-large-start){
     @content
   }
 }
 @mixin small-screen {
-  @media all and (max-width: $mobile-breakpoint-medium) {
+  @media all and (max-width: $mobile-breakpoint-medium-end) {
     @content
   }
 }

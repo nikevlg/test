@@ -24,29 +24,14 @@
 				float: left;
 				text-align: right;
 			}
-		}
-		&--xlarge{
-			display: none;
-			@include Xlarge-screen(){
-				display: block;
-			}
-		}
-		&--medium{
-			display: none;
-			@include medium-screen(){
-				display: block;
-			}
-			@include large-screen(){
-				display: block;
-			}
-		}
+		}		
 	}
 
 	&__mobile{
 		.mobile-slider {
 			margin: 60px 0;
 			line-height: 1.5;
-			 padding: 10px;
+			padding: 10px;
 			img{
 				margin-bottom:  60px;
 			}

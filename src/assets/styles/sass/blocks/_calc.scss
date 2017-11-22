@@ -1,0 +1,105 @@
+.calc{
+	table{
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		margin: 20px auto;
+		color: $color-blue-dark;
+	}
+
+	td{
+		vertical-align: middle;
+		border: none;
+	}
+	.name-row{		
+		font-size: 16px;
+		padding: 10px;
+		line-height: 1.5;
+		box-shadow: inset -21px 0px 42px -35px rgba(0,0,0,0.75);
+		text-align: center;
+		&.filling{
+			background-color: #d0d8e2; 		 
+		}		
+	}
+
+	.title-tariff, .title-tariff, .title-tariff{	
+		width: 145px;
+		height: 145px;	
+		padding: 0;
+		text-align: center;	
+		font-size: 16px;
+		line-height: 1.5;
+		color: #fff;
+		cursor: pointer;		
+		box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.5);
+		&>div{
+			width: 145px;
+			height: 145px;
+			border-radius: 4px 4px 0 0;
+			overflow: hidden;
+			background-repeat: no-repeat;	
+			background-size: 100%;
+			p{
+				margin: 85px 0 20px 0;
+			}
+		}
+		&--a{
+			&>div{
+				background-image: url('../images/tariff-desctop-a.png')
+			}
+		}
+		&--b{
+			&>div{
+				background-image: url('../images/tariff-desctop-b.png')
+			}
+		}
+		&--c{
+			&>div{
+				background-image: url('../images/tariff-desctop-c.png')
+			}	
+		}	
+		span{
+			opacity: 0.5;
+			font-size: 14px;
+		}
+	}
+	.column{
+		text-align: center;		
+		font-size: 15px;
+		padding: 10px;
+		cursor: pointer;
+		&--a{ 
+
+		}
+		&--b{
+
+		}
+		&--c{ 
+
+		}
+		&--active{
+			background-color: $color-green;
+			color: #fff;
+		}		
+	}
+
+	.divider{	
+		width: 8px;				 
+		padding: 0;
+		box-shadow: inset -21px 0px 42px -35px rgba(0,0,0,0.75);
+		&.filling{
+			background-color: #d0d8e2; 
+		}
+		&--left{
+			box-shadow: inset 21px 0px 42px -35px rgba(0,0,0,0.75);				
+		}
+	}
+
+	&__totals{
+		width: 300px;
+		height: 750px;
+		background-color: $color-blue-dark;
+		border-radius: 4px;
+		box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
+	} 
+}
