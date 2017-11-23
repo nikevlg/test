@@ -74,3 +74,13 @@
     display: block;
   }
 }
+//только на среднем и мобильном разрешении
+.m_s-v{
+  display: none;
+  @include medium-screen(){
+    display: block;
+  }
+  @include small-screen(){
+    display: block;
+  }
+}

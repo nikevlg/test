@@ -1,5 +1,5 @@
 <div class="calc">
-	<div class="uk-container uk-padding-remove uk-container-center xl_l-v">
+	<div class="uk-container uk-padding-remove uk-container-center calc__desctop xl_l-v">
 		<table>
 			<thead>
 				<td></td>
@@ -52,14 +52,14 @@
 				</td>
 				<td class="divider divider--left"></td>
 				<!--Правая часть калькулятора-->
-				<td rowspan="9" class="calc__totals">
+				<td rowspan="9" class="calc__desctop__totals">
 					<div>
 						<h4>Тариф</h4>
 						<a href="" class="button button--green button--green-hover ">Птеродактиль</a> <!--у активной кнопки заменить button--white на  button--green-->
 						<a href="" class="button button--white button--green-hover ">Мастодонт</a>
 						<a href="" class="button button--white button--green-hover ">Тираннозавр</a>
 						<div class="desc">
-					 		Тариф для тех, кому не приходится <br>
+							Тариф для тех, кому не приходится <br>
 							сталкиваться с бумажной <br>
 							волокитой ежедневно. Доступ <br>
 							ко всей базе юридических <br>
@@ -72,6 +72,7 @@
 							<!-- Ультимативное решение всех проблем с оформлением юридических документов любого уровня. Безграничный доступ <br> ко всей базе сервиса Doczilla.  --> 
 						</div>
 						<div class="select-date">
+							<div class="select-date--mute"></div> <!--добавляем при активном птеродактиле-->
 							<span>Количество месяцев</span>
 							<ul>
 								<li><a class="month" href="">1</a></li>
@@ -87,7 +88,8 @@
 								<span class="total-price">Итого: 8000 руб.</span>
 							</div>
 						</div>
-						<a href="" class="button button--green button--hover-light">Купить</a> 
+						<!-- <a href="" class="button button--green button--hover-light">Купить</a>  -->
+						<a href="" class="button button--green button--hover-light">Начать работу</a>  <!--добавляем при активном птеродактиле-->
 					</div>
 				</td>
 				<!--/Правая часть калькулятора-->
@@ -246,4 +248,191 @@
 			</tr>
 		</table>
 	</div>
+
+	<!--Мобильная версия-->
+	<div class="calc__mobile m_s-v">
+		<div class="mobile-slider uk-slidenav-position"
+		data-uk-slideshow="{animation: 'scroll', autoplay: false}">
+		<ul class="uk-slideshow">
+			<li>
+				<table>
+					<tr>
+						<td colspan="2"  class="head-title">
+							<div>
+								<h3>Птеродактиль</h3>
+								<span>тариф</span>	
+							</div>							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Абонентская плата
+						</td>
+						<td>
+							Да
+						</td>
+					</tr>
+					<tr>
+						<td>Формат экспорта</td>
+						<td>MS Word, OpenDoc</td>
+					</tr>
+					<tr>
+						<td>База стандартных документов</td>
+						<td>Доп. плата</td>
+					</tr>
+					<tr>
+						<td>База документов	уровня «эксперт»</td>
+						<td>Доп. плата</td>
+					</tr>
+					<tr>
+						<td>Автозаполнение полей</td>
+						<td>Да</td>
+					</tr>
+					<tr> 
+						<td>Количество копий по шаблону</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>Совместная работа над документом</td>
+						<td>Нет</td>
+					</tr>
+					<tr>
+						<td>Группы пользователей</td>
+						<td>Нет</td>
+					</tr>
+					<tr>
+						<td>Юридические консультации</td>
+						<td>Да</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="wrapper-but uk-text-center">
+							<a href="" class="button button--green">Начать работу</a>							
+						</td>						
+					</tr>
+				</table>
+				
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td colspan="2"  class="head-title">
+							<div>
+								<h3>Мастодонт</h3>
+								<span>тариф</span>	
+							</div>							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Абонентская плата
+						</td>
+						<td>
+							Да
+						</td>
+					</tr>
+					<tr>
+						<td>Формат экспорта</td>
+						<td>MS Word, OpenDoc</td>
+					</tr>
+					<tr>
+						<td>База стандартных документов</td>
+						<td>Да</td>
+					</tr>
+					<tr>
+						<td>База документов	уровня «эксперт»</td>
+						<td>Доп. плата</td>
+					</tr>
+					<tr>
+						<td>Автозаполнение полей</td>
+						<td>Да</td>
+					</tr>
+					<tr> 
+						<td>Количество копий по шаблону</td>
+						<td>Не ограничено</td>
+					</tr>
+					<tr>
+						<td>Совместная работа над документом</td>
+						<td>Да</td>
+					</tr>
+					<tr>
+						<td>Группы пользователей</td>
+						<td>Да</td>
+					</tr>
+					<tr>
+						<td>Юридические консультации</td>
+						<td>Да</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="wrapper-but uk-text-center">
+							<a href="" class="button button--green">Купить</a>							
+						</td>						
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td colspan="2"  class="head-title">
+							<div>
+								<h3>Тираннозавр</h3>
+								<span>тариф</span>	
+							</div>							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Абонентская плата
+						</td>
+						<td>
+							Да
+						</td>
+					</tr>
+					<tr>
+						<td>Формат экспорта</td>
+						<td>MS Word, OpenDoc</td>
+					</tr>
+					<tr>
+						<td>База стандартных документов</td>
+						<td>Да</td>
+					</tr>
+					<tr>
+						<td>База документов	уровня «эксперт»</td>
+						<td>Да</td>
+					</tr>
+					<tr>
+						<td>Автозаполнение полей</td>
+						<td>Да</td>
+					</tr>
+					<tr> 
+						<td>Количество копий по шаблону</td>
+						<td>Не ограничено</td>
+					</tr>
+					<tr>
+						<td>Совместная работа над документом</td>
+						<td>Да</td>
+					</tr>
+					<tr>
+						<td>Группы пользователей</td>
+						<td>Да</td>
+					</tr>
+					<tr>
+						<td>Юридические консультации</td>
+						<td>Да</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="wrapper-but uk-text-center">
+							<a href="" class="button button--green">Купить</a>							
+						</td>						
+					</tr>
+				</table>
+			</li>
+		</ul>
+		<ul class="uk-dotnav uk-dotnav-contrast uk-flex-center">
+			<li data-uk-slideshow-item="0"><a href=""></a></li>
+			<li data-uk-slideshow-item="1"><a href=""></a></li>
+			<li data-uk-slideshow-item="2"><a href=""></a></li>
+		</ul>
+	</div>
+</div>
+<!--/Мобильная версия-->
 </div>

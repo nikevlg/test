@@ -1,205 +1,288 @@
 .calc{
-	table{
-		border-collapse: collapse;
-		border-spacing: 0;
-		width: 100%;
-		margin: 20px auto;
-		color: $color-blue-dark;
-	}
+	&__desctop{
+		table{
+			border-collapse: collapse;
+			border-spacing: 0;
+			width: 100%;
+			margin: 20px auto;
+			color: $color-blue-dark;
+		}
 
-	td{
-		vertical-align: middle;
-		border: none;
-	}
-	.name-row{		
-		font-size: 16px;
-		padding: 10px;
-		line-height: 1.5;
-		box-shadow: inset -21px 0px 42px -35px rgba(0,0,0,0.75);
-		text-align: center;
-		&.filling{
-			background-color: #d0d8e2; 		 
-		}		
-	}
+		td{
+			vertical-align: middle;
+			border: none;
+		}
+		.name-row{		
+			font-size: 16px;
+			padding: 10px;
+			line-height: 1.5;
+			box-shadow: inset -21px 0px 42px -35px rgba(0,0,0,0.75);
+			text-align: center;
+			&.filling{
+				background-color: #d0d8e2; 		 
+			}		
+		}
 
-	.title-tariff, .title-tariff, .title-tariff{	
-		width: 145px;
-		height: 145px;	
-		padding: 0;
-		text-align: center;	
-		font-size: 16px;
-		line-height: 1.5;
-		color: #fff;
-		cursor: pointer;		
-		box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.5);
-		&>div{
+		.title-tariff, .title-tariff, .title-tariff{	
 			width: 145px;
-			height: 145px;
-			border-radius: 4px 4px 0 0;
-			overflow: hidden;
-			background-repeat: no-repeat;	
-			background-size: 100%;
-			p{
-				margin: 85px 0 20px 0;
-			}
-		}
-		&--a{
-			&>div{
-				background-image: url('../images/tariff-desctop-a.png')
-			}
-		}
-		&--b{
-			&>div{
-				background-image: url('../images/tariff-desctop-b.png')
-			}
-		}
-		&--c{
-			&>div{
-				background-image: url('../images/tariff-desctop-c.png')
-			}	
-		}	
-		span{
-			opacity: 0.5;
-			font-size: 14px;
-		}
-	}
-	.column{
-		text-align: center;		
-		font-size: 15px;
-		padding: 10px;
-		cursor: pointer;
-		&--a{ 
-
-		}
-		&--b{
-
-		}
-		&--c{ 
-
-		}
-		&--active{
-			background-color: $color-green;
+			height: 145px;	
+			padding: 0;
+			text-align: center;	
+			font-size: 16px;
+			line-height: 1.5;
 			color: #fff;
-		}		
-	}
-
-	.divider{	
-		width: 8px;				 
-		padding: 0;
-		box-shadow: inset -21px 0px 42px -35px rgba(0,0,0,0.75);
-		&.filling{
-			background-color: #d0d8e2; 
+			cursor: pointer;		
+			box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.5);
+			&>div{
+				width: 145px;
+				height: 145px;
+				border-radius: 4px 4px 0 0;
+				overflow: hidden;
+				background-repeat: no-repeat;	
+				background-size: 100%;
+				p{
+					margin: 85px 0 20px 0;
+				}
+			}
+			&--a{
+				&>div{
+					background-image: url('../images/tariff-desctop-a.png')
+				}
+			}
+			&--b{
+				&>div{
+					background-image: url('../images/tariff-desctop-b.png')
+				}
+			}
+			&--c{
+				&>div{
+					background-image: url('../images/tariff-desctop-c.png')
+				}	
+			}	
+			span{
+				opacity: 0.5;
+				font-size: 14px;
+			}
 		}
-		&--left{
-			box-shadow: inset 21px 0px 42px -35px rgba(0,0,0,0.75);				
+		.column{
+			text-align: center;		
+			font-size: 15px;
+			padding: 10px;
+			cursor: pointer;
+			&--a{ 
+
+			}
+			&--b{
+
+			}
+			&--c{ 
+
+			}
+			&--active{
+				background-color: $color-green;
+				color: #fff;
+			}		
 		}
-	}
 
-	&__totals{
-		width: 300px;
-		height: 750px;
-		vertical-align: top !important;
-		background-color: $color-blue-dark;		
-		border-radius: 4px;
-		box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
-		&>div{
-			padding: 25px 40px 30px 40px;
-			h4{
-				width: 100%;
-				text-align: center;
-				font-size: 16px;
-				margin: 0 0 15px 0;
-				color: #fff;
+		.divider{	
+			width: 8px;				 
+			padding: 0;
+			box-shadow: inset -21px 0px 42px -35px rgba(0,0,0,0.75);
+			&.filling{
+				background-color: #d0d8e2; 
 			}
-			.button{
-				width: 140px;
-				margin: 6px 0;
+			&--left{
+				box-shadow: inset 21px 0px 42px -35px rgba(0,0,0,0.75);				
 			}
-			.desc{
-				width: 100%;
-				height: 146px;
-				margin: 25px 0;
-				color: #fff;
-				font-size: 13px;
-				line-height: 1.5;
-				text-align: center;
+		}
 
-
-			}
-			.select-date{
-				span{
-					display: inline-block;
+		&__totals{
+			width: 300px;
+			height: 750px;
+			vertical-align: top !important;
+			background-color: $color-blue-dark;		
+			border-radius: 4px;
+			box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
+			&>div{
+				padding: 25px 40px 30px 40px;
+				h4{
 					width: 100%;
 					text-align: center;
 					font-size: 16px;
+					margin: 0 0 15px 0;
 					color: #fff;
 				}
-				ul{
-					list-style: none;
-					float: right;
-					margin: 15px 0 0 0;
-					padding: 0;
-					li{
+				.button{
+					width: 140px;
+					margin: 6px 0;
+				}
+				.desc{
+					width: 100%;
+					height: 146px;
+					margin: 25px 0;
+					color: #fff;
+					font-size: 13px;
+					line-height: 1.5;
+					text-align: center;
+
+
+				}
+				.select-date{
+					position: relative;
+					&--mute{
+						position: absolute;
+						z-index: 1;
+						width: 220px;
+						height: 120px;
+						background-color: #2f6296;    
+						opacity: 0.8;
+						cursor: not-allowed;
+					}
+					span{
 						display: inline-block;
-						margin: 0 5px;
-						a.month{	
-							display: block;
-							width: 40px;
-							height: 40px; 
-							border: 1px solid #fff;
-							border-radius: 4px;
-							font-size: 16px;
-							text-align: center;
-							line-height: 40px;
-							color: #fff;
-							text-decoration: none;
-							&:hover, &--active{
-								background-color: $color-green;
-								border-color: $color-green; 
+						width: 100%;
+						text-align: center;
+						font-size: 16px;
+						color: #fff;
+					}
+					ul{
+						list-style: none;
+						float: right;
+						margin: 15px 0 0 0;
+						padding: 0;
+						li{
+							display: inline-block;
+							margin: 0 5px;
+							a.month{	
+								display: block;
+								width: 40px;
+								height: 40px; 
+								border: 1px solid #fff;
+								border-radius: 4px;
+								font-size: 16px;
+								text-align: center;
+								line-height: 40px;
+								color: #fff;
+								text-decoration: none;
+								&:hover, &--active{
+									background-color: $color-green;
+									border-color: $color-green; 
+								}
 							}
 						}
 					}
+					i{
+						display: inline-block;
+						width: 100%;
+						font-style: normal;
+						font-size: 14px;
+						text-align: center;
+						color: #fff;
+						opacity: 0.5;
+						margin: 10px 0 0 0;
+					}
 				}
-				i{
-					display: inline-block;
+				.total-sum{
 					width: 100%;
-					font-style: normal;
-					font-size: 14px;
-					text-align: center;
-					color: #fff;
-					opacity: 0.5;
-					margin: 10px 0 0 0;
+					height: 100px;
+					position: relative;
+					margin: 25px 0;
+					div{
+						position: absolute;
+						left: -30px;
+						width: 280px;
+						height: 100px;
+						text-align: center;
+						background-color: #fff;
+						border-radius: 4px;
+						box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
+						.saving{
+							display: inline-block;
+							width: 100%;
+							background-color: $color-orange;
+							color: #fff;
+							border-radius: 4px 4px 0 0;
+							padding: 15px 0;
+						}
+						.total-price{
+							display: inline-block;
+							width: 100%;
+							padding: 15px 0;
+						} 
+					}			
 				}
 			}
-			.total-sum{
-				width: 100%;
-				height: 100px;
-				position: relative;
-				margin: 25px 0;
-				div{
-					position: absolute;
-					left: -30px;
-					width: 280px;
-					height: 100px;
-					text-align: center;
-					background-color: #fff;
-					border-radius: 4px;
-					box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
-					.saving{
-						display: inline-block;
-						width: 100%;
-						background-color: $color-orange;
-						color: #fff;
-						border-radius: 4px 4px 0 0;
-						padding: 15px 0;
+		} 
+	}
+	&__mobile{
+		width: 100%;
+		background-color: #d9e1eb; 
+		padding: 50px 0 15px 0;
+
+		table{
+			border-collapse: collapse; 
+			border-spacing: 0;
+			width: 100%;
+			tr{
+				td{
+					background-color: #fff;		
+					padding: 15px 0 15px 0;
+					font-size: 16px;
+					color: $color-blue-dark;	
+
+				}
+				&:nth-child(2n+1){
+					td{
+						background-color: #d9e1eb; 
 					}
-					.total-price{
+				}
+			}
+			td{
+				text-align: center;
+				width: 50%;
+			}
+			.head-title{
+				padding: 0;
+				&>div{
+					background-color: $color-blue-dark;
+					text-align: center;
+					padding-top: 20px;
+					border-radius: 4px 4px 0 0; 
+					h3{
+						@extend %roboto_medium;
+						font-size: 30px;
+						color: #fff;
+						margin: 0 0 15px 0;
+					}
+					span{
 						display: inline-block;
-						width: 100%;
-						padding: 15px 0;
-					} 
-				}			
+						margin-bottom: 20px;
+						color: #fff;
+						opacity: .5;
+					}
+				}				
 			}
 		}
-	} 
+		.wrapper-but{
+			width: 100%;
+			text-align: center;    
+			background-color: #fff !important;
+			padding: 25px 0;
+		}
+		.mobile-slider{
+			.uk-slideshow{   	
+				box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
+				&>li{
+					padding-bottom: 20px;
+				}
+			}
+			
+			.uk-dotnav{
+				margin-top: 20px;
+			}
+			.button{
+				width: 150px;
+			}
+		}
+	}
 }
