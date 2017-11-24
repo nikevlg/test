@@ -1,0 +1,22 @@
+.start{
+	&__desctop{
+		min-height: 370px;
+		max-height: 480px;
+		background-image: url('../images/bg-tyan.jpg'); 
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 135px 80px;
+		&__info{
+			text-align: right;
+			h3{
+				@extend %roboto_medium;
+				color: #fff;
+				font-size: 36px;
+				line-height: 1.5;
+			}
+			@include medium-screen(){
+				text-align: center;
+			}
+		}
+	}
+}

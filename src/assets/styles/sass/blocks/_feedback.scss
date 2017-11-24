@@ -1,0 +1,75 @@
+.feedback{
+	background-color: $color-blue-dark;
+	&__desctop{
+		h2{
+			@extend %roboto_medium;
+			width: 100%;
+			margin: 50px 0;
+			text-align: center;
+			color: #fff;
+		}
+		&__card{
+			&__photo{	   
+				.wrapper{
+					display: block;
+					position: relative;		
+					width: 160px;
+					height: 160px;		
+					margin: auto;
+					cursor: pointer;
+					&:hover{
+						.facebook{
+							background-position-y: 35px;
+						}
+					}
+				}
+				.image{					
+					width: 160px;
+					height: 160px;
+					border-radius: 100%;
+					overflow: hidden;					
+				}
+				.facebook{
+					position: absolute;
+					right: 0;
+					bottom: 10px;
+					width: 35px;
+					height: 35px;
+					background-image: url("../images/fb2.png");
+				}
+			}
+			&__text{ 
+				a{
+					color: #fff;
+				}
+				line-height: 1.5;
+				color: #fff;
+			}
+
+			@include medium-screen(){
+				&__photo{	
+					width: 100%;
+					margin-bottom: 25px;
+				}
+				&__text{
+					width: 100%;
+					text-align: center;
+				}
+			}
+
+			@include small-screen(){
+				&__photo{	
+					width: 100%;
+					margin-bottom: 25px;
+				}
+				&__text{
+					width: 100%;
+					text-align: center; 
+				}
+			}
+		}
+		.uk-dotnav{
+			margin: 25px 0;
+		}
+	}
+}
