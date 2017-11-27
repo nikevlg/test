@@ -28,7 +28,7 @@
 				text-decoration: none;			
 			}
 		}
-	}
+	}	
 	.m-v{
 		ul{
 			position: absolute;
@@ -38,6 +38,24 @@
 			margin-left: -188px;
 			li{
 				margin-left: 50px;
+				&:first-child{
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	.s-v{
+		span{
+			padding-bottom: 15px;
+		}
+		ul{
+			position: absolute;
+			width: 270px;
+			left: 50%;
+			bottom: -15px;
+			margin-left: -138px;
+			li{
+				margin-left: 25px;
 				&:first-child{
 					margin-left: 0;
 				}
