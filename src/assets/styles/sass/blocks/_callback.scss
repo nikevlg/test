@@ -1,0 +1,47 @@
+.callback{
+	position: relative;
+	padding: 32px 0;
+	background-color:  $color-base; 
+	box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
+	span{
+		@extend %roboto_medium;
+		display: inline-block;
+		color: #fff;
+		font-size: 34px;
+	}	
+	.button{
+		display: inline-block;
+	}
+	ul{ display: inline-block;
+		list-style: none; 
+		margin: 0;
+		padding: 0;
+		float: right;
+		margin-top: 10px;
+		li{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin-left: 20px;
+			a{ 
+				color: #fff;	
+				text-decoration: none;			
+			}
+		}
+	}
+	.m-v{
+		ul{
+			position: absolute;
+			width: 390px;
+			left: 50%;
+			bottom: -15px;
+			margin-left: -188px;
+			li{
+				margin-left: 50px;
+				&:first-child{
+					margin-left: 0;
+				}
+			}
+		}
+	}
+} 

@@ -14,7 +14,7 @@
   }
 }
 @mixin small-screen {
-  @media all and (max-width: $mobile-breakpoint-medium-end) {
+  @media all and (max-width: $mobile-breakpoint-medium-start)   {
     @content
   }
 }
@@ -25,7 +25,7 @@
   @include Xlarge-screen(){
     display: block;
   }
-   @include large-screen(){
+  @include large-screen(){
     display: none;
   }
   @include medium-screen(){
@@ -43,6 +43,7 @@
     display: none;
   }
 }
+
 //только на среднем разрешении
 .m-v{
   display: none;
@@ -51,6 +52,23 @@
   }
   @include large-screen(){
     display: none;
+  }
+}
+
+//только на мобильном разрешении
+.s-v{
+  display: none;
+  @include Xlarge-screen(){
+    display: none;
+  }
+  @include large-screen(){
+    display: none;
+  }
+  @include medium-screen(){
+    display: none;
+  } 
+  @include small-screen(){
+    display: block; 
   }
 }
 
@@ -75,7 +93,7 @@
   }
 }
 //только на среднем и мобильном разрешении
-.m_s-v{
+.m_s-v{ 
   display: none;
   @include medium-screen(){
     display: block;
