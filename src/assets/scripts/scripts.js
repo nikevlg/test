@@ -16,49 +16,6 @@ window.onresize = function(event) {
   }
 };
 
-
-//  Youtube player
-var firstScriptTag, onPlayerReady, player, tag;
-
-player = null;
-tag = document.createElement('script');
-tag.src = "//www.youtube.com/player_api";
-firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-window.onYouTubePlayerAPIReady = function() {
-  return player = new YT.Player('video', {
-    events: {
-      'onReady': onPlayerReady
-    }
-  })
-};
-
-onPlayerReady = function() {
-  var playButton;
-  playButton = document.getElementsByClassName('play-js')[0];
-  return playButton.addEventListener('click', function() {
-    playButton.classList.add('in-play');
-    return player.playVideo();
-  });
-};
-
-//  End youtube player
-
-// Recapcha
-var callbackRecaptcha, questionsRecaptcha;
-
-myRecaptchaCallBack = function() {
-  callbackRecaptcha = grecaptcha.render('callback-recaptcha', {
-    'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf',
-    'theme': 'light'
-  });
-  questionsRecaptcha = grecaptcha.render('questions-recaptcha', {
-    'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf',
-    'theme': 'light'
-  });
-};
-//  End recapcha
-
 // Calculator
 var calculatorData = {
   selectedTariff: 1,
@@ -138,10 +95,13 @@ var calculatorData = {
     var monthEnd = this.monthEnds[this.selectedMonthIndex];
     document.getElementsByClassName('js-price-per-month')[0].innerHTML = 'Цена за ' + monthsAmount + ' ' + monthEnd + ': ' + pricePerMonth.toLocaleString() + ' руб.';
     if (economy > 0 || this.selectedTariff == 0) {
-      document.getElementsByClassName('js-economy')[0].innerHTML = 'Экономия: ' + economy.toLocaleString() + ' руб.';
+      document.getElementsByClassName('js-economy-big')[0].innerHTML = 'Экономия: ' + economy.toLocaleString() + ' руб.';
+      document.getElementsByClassName('js-economy-big')[0].style.display = 'block';
+      document.getElementsByClassName('js-economy-small')[0].style.display = 'none';
     }
     else {
-      document.getElementsByClassName('js-economy')[0].innerHTML = 'Экономьте, выбирая <br> больший срок использования';
+      document.getElementsByClassName('js-economy-small')[0].style.display = 'block';
+      document.getElementsByClassName('js-economy-big')[0].style.display = 'none';
     }
     document.getElementsByClassName('js-price')[0].innerHTML = 'Итого: ' + price.toLocaleString() + ' руб.';
   }
@@ -151,3 +111,45 @@ document.addEventListener("DOMContentLoaded", function(event) {
   calculatorData.init();
 });
 // End calculator
+
+//  Youtube player
+var firstScriptTag, onPlayerReady, player, tag;
+
+player = null;
+tag = document.createElement('script');
+tag.src = "//www.youtube.com/player_api";
+firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+window.onYouTubePlayerAPIReady = function() {
+  return player = new YT.Player('video', {
+    events: {
+      'onReady': onPlayerReady
+    }
+  })
+};
+
+onPlayerReady = function() {
+  var playButton;
+  playButton = document.getElementsByClassName('play-js')[0];
+  return playButton.addEventListener('click', function() {
+    playButton.classList.add('in-play');
+    return player.playVideo();
+  });
+};
+
+//  End youtube player
+
+// Recapcha
+var callbackRecaptcha, questionsRecaptcha;
+
+myRecaptchaCallBack = function() {
+  callbackRecaptcha = grecaptcha.render('callback-recaptcha', {
+    'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf',
+    'theme': 'light'
+  });
+  questionsRecaptcha = grecaptcha.render('questions-recaptcha', {
+    'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf',
+    'theme': 'light'
+  });
+};
+//  End recapcha
