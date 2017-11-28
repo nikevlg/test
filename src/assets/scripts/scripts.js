@@ -44,3 +44,24 @@ onPlayerReady = function() {
 
 //  End youtube player
 
+var callbackRecaptcha, myRecaptchaCallBack, questionsRecaptcha;
+
+callbackRecaptcha = void 0;
+
+questionsRecaptcha = void 0;
+
+myRecaptchaCallBack = function() {
+  callbackRecaptcha = grecaptcha.render('callback-recaptcha', {
+    'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf',
+    'theme': 'light'
+  });
+  questionsRecaptcha = grecaptcha.render('questions-recaptcha', {
+    'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf',
+    'theme': 'light'
+  });
+
+  /*authRecaptcha = grecaptcha.render('auth-recaptcha',
+    'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf'
+    'theme': 'light')
+   */
+};

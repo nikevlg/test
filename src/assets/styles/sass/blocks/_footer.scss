@@ -75,6 +75,68 @@
 		}
 		.uk-accordion-content{
 			background-color: $color-yellow;
+			padding-bottom: 0;
+		}
+		form{
+			padding: 15px;
+			table{
+				border-collapse: collapse;
+				border-spacing: 0;
+				width: 100%;
+				td{
+					vertical-align: top;
+					padding: 10px;
+				}
+				.text{
+					width: 100%;
+					padding-right: 10px;
+					textarea{
+						width: 100%;
+						height: 150px;
+						padding: 10px;
+						resize: none;
+						box-sizing: border-box;
+						background-color: #e5af33;
+						border-radius: 4px;
+						border: 1px solid #a57d22;
+						&::placeholder{
+							color:  #a57d22; 
+						}
+					}
+				}
+				input{
+					height: 30px;
+					width: 150px;
+					padding: 0 10px;
+					margin-bottom: 10px;
+					border-radius: 4px;
+					background-color: #e5af33;
+					border: 1px solid #a57d22;
+					&::placeholder{
+						color:  #a57d22; 
+					}
+					&.input-error{
+						border: 1px solid $color-red;
+					}
+				}
+				.recaptcha{
+					position: relative;
+					.error-message{
+						position: absolute;
+						font-size: 14px;
+						color: $color-red;
+					}
+				}
+				.button{
+					height: 30px;
+					padding: 0 15px;
+					font-size: 16px;
+					border-radius: 4px;
+					border: 1px solid #ccc;
+					background-color: #fff;
+					cursor: pointer;
+				}
+			}
 		}
 	}
 	&__social{
