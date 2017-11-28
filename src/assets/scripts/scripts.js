@@ -44,6 +44,21 @@ onPlayerReady = function() {
 
 //  End youtube player
 
+// Recapcha
+var callbackRecaptcha, questionsRecaptcha;
+
+myRecaptchaCallBack = function() {
+  callbackRecaptcha = grecaptcha.render('callback-recaptcha', {
+    'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf',
+    'theme': 'light'
+  });
+  questionsRecaptcha = grecaptcha.render('questions-recaptcha', {
+    'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf',
+    'theme': 'light'
+  });
+};
+//  End recapcha
+
 // Calculator
 var calculatorData = {
   selectedTariff: 1,

@@ -24,10 +24,31 @@
 		<div class="uk-navbar-flip navigate__phone uk-hidden-small">
 			<a href="#">8 (800) 700 08 16</a>
 		</div>
+		<!--Форма заказа обратного звонка--> 
+		<form class="navigate__callback ">  <!-- для отображения окна класс navigate__callback--active -->			
+			<h3>Заказать обратный <br>
+				звонок
+			</h3>
+			<div class="navigate__callback__input-wrapper">
+				<input type="text" placeholder="Имя">
+				<span>Введите имя</span>
+			</div>	
+			<div class="navigate__callback__input-wrapper">
+				<input type="text" placeholder="E-mail">
+				<span>Введите корректный e-mail</span>
+			</div>	
+			<div class="navigate__callback__input-wrapper">
+				<input type="text" placeholder="+7 000 000 00 00">
+				<span>Неверный формат</span>
+			</div>
+			<div class="navigate__callback__input-wrapper">
+				<div id="callback-recaptcha" data-sitekey="6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf" class="g-recaptcha"></div>
+				<span>Пройдите проверку</span>
+			</div>
+			<div class="navigate__callback__button-wrapper">
+				<button class="button button--normal button--green-hover" type="button">Заказать звонок</button>
+			</div>
+		</form>
+		<!--/Форма заказа обратного звонка-->
 	</nav>
 </header>
-<!-- <div class="mobile-menu uk-visible-small">
-	<a href="">Для физических лиц</a>
-	<a href="">Для гос. сектора</a>
-	TODO переключение, в зависимости от текущего раздела <a href="">Для бизнеса</a>
-</div> -->

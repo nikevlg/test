@@ -104,7 +104,7 @@
 			border-radius: 4px;
 			box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
 			&>div{
-				padding: 25px 40px 30px 40px;
+				padding: 25px 40px 10px 40px;
 				h4{
 					width: 100%;
 					text-align: center;
@@ -185,30 +185,39 @@
 				}
 				.total-sum{
 					width: 100%;
-					height: 100px;
+					height: 120px;
 					position: relative;
-					margin: 25px 0;
-					div{
+					margin: 25px 0 20px 0;
+					&__wrapper{
 						position: absolute;
 						left: -30px;
 						width: 280px;
-						height: 100px;
+						height: 120px;
 						text-align: center;
 						background-color: #fff;
 						border-radius: 4px;
 						box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
-						.saving{
-							display: inline-block;
-							width: 100%;
+						.top-elem{
+							height: 70px;
 							background-color: $color-orange;
-							color: #fff;
 							border-radius: 4px 4px 0 0;
-							padding: 15px 0;
+							.saving-small{
+								line-height: 1.5;
+								padding-top: 10px;
+								color: #fff;
+								font-size: 16px;
+							}
+							.saving-big{
+								display: none;
+								line-height: 1.5;
+								padding-top: 20px;
+								color: #fff;
+								font-size: 20px;
+							}
 						}
-						.total-price{
-							display: inline-block;
-							width: 100%;
-							padding: 15px 0;
+						.bottom-elem{
+							background-color: #fff;
+							padding-top: 15px;
 						} 
 					}			
 				}
