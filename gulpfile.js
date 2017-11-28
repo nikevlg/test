@@ -197,11 +197,13 @@ gulp.task('fonts', function() {
 gulp.task('js', function() {
   var version = args.argv.mode === 'prod' ? 'prod':'test';
   var urlReplacement = urlPaths[version]
-  return gulp.src(paths.scripts)
-  .pipe(replace(urlReplacement))
-  .pipe(uglify())
-  .pipe(concat('scripts.min.js'))
-  .pipe(gulp.dest(buildPaths.scripts));
+  var pipe = gulp.src(paths.scripts)
+                 .pipe(replace(urlReplacement));
+  if (version === 'prod') {
+    pipe.pipe(uglify());
+  }
+  return pipe.pipe(concat('scripts.min.js'))
+             .pipe(gulp.dest(buildPaths.scripts));
 });
 
 
