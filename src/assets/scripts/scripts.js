@@ -44,7 +44,7 @@ onPlayerReady = function() {
 
 //  End youtube player
 
-var callbackRecaptcha, myRecaptchaCallBack, questionsRecaptcha;
+var callbackRecaptcha, questionsRecaptcha;
 
 callbackRecaptcha = void 0;
 
@@ -59,9 +59,4 @@ myRecaptchaCallBack = function() {
     'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf',
     'theme': 'light'
   });
-
-  /*authRecaptcha = grecaptcha.render('auth-recaptcha',
-    'sitekey': '6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf'
-    'theme': 'light')
-   */
 };
