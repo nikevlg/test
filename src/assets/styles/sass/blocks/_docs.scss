@@ -1,49 +1,39 @@
 .docs{	
-	&__desctop{
-		padding: 100px 10px;
-		.uk-grid{
-			background-color: #fff;
-		}
-
-
-		&__redirect{
-			h2{
-				@extend %roboto_medium;
-				font-size: 66px;
-				line-height: 1;
-				color: $color-blue-dark;
-			}
-			span{
-				font-size: 37px;
-				color: $color-base;
-			}
-			p{
-				font-size: 18px;
-				line-height: 1.5;
-				margin-bottom: 25px;
-			}
-			a{
-				width: 240px;
-			}
-		}
-		&__tags{
-			text-align: right; 
-			padding-top: 80px;
-			span{
-				@extend %roboto_medium;	
-				display: inline-block;
-				color: $color-base;
-				font-size: 18px;	
-				margin: 10px 15px;					
-			}
-		/* 	.hard{
+	background-color:  $color-blue-dark;
+	background-image: url(../images/pattern.png);
+	padding: 25px 0;
+	margin-bottom: 50px;
+	&__redirect{
+		text-align: center; 
+		margin-bottom: 25px;
+		h2{
+			@extend %roboto_medium;
+			width: 100%;
 			font-size: 36px;
-			color:  $color-blue-dark;
-		} */
-
+			color: #fff;
+			margin-top: 15px;
+		}
+		p{
+			font-size: 20px;
+			color: #fff;
+			line-height: 1.5;
 		}
 	}
-	&__mobile{
-
+	&__tags{
+		text-align: center;
+		a{
+			margin: 15px; 
+		}
+		.button{
+			background-color: $color-blue-dark; 
+		}
+	}
+	&__button{
+		text-align: center;
+		margin: 25px 0 15px 0;
+		a.button{
+			padding-left: 60px;
+			padding-right: 60px;
+		}
 	}
 }

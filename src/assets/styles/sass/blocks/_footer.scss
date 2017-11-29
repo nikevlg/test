@@ -142,6 +142,8 @@
 		margin-top: 40px;
 		.wrapper-soc{
 			width: 280px;	
+			border-radius: 6px;
+			overflow: hidden;
 		}
 		@include  small-screen(){
 			display: none;
