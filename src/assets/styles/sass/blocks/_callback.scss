@@ -23,6 +23,8 @@
 			width: 20px;
 			height: 20px;
 			margin-left: 20px;
+			background-color: $color-base;
+			border-radius: 100%;
 			a{ 
 				color: #fff;	
 				text-decoration: none;			
@@ -32,10 +34,10 @@
 	.m-v{
 		ul{
 			position: absolute;
-			width: 390px;
+			width: 320px;
 			left: 50%;
-			bottom: -15px;
-			margin-left: -188px;
+			bottom: -14px;
+			margin-left: -168px;
 			li{
 				margin-left: 50px;
 				&:first-child{
@@ -50,10 +52,10 @@
 		}
 		ul{
 			position: absolute;
-			width: 270px;
+			width: 220px;
 			left: 50%;
-			bottom: -15px;
-			margin-left: -138px;
+			bottom: -14px;
+			margin-left: -110px;
 			li{
 				margin-left: 25px;
 				&:first-child{

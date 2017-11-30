@@ -4,6 +4,7 @@
 	position: relative;
 	background-image: url(../images/green_bg.png);  
 	background-color: $color-green;
+	
 	.container {
 		min-height: 57px;
 		padding-top: 16px; 	
@@ -60,5 +61,18 @@
 			margin-bottom: 16px;
 		}		
 	}
-	
+	z-index: 1000;
+	&__fixed{
+		position: fixed;
+		bottom: 0;
+		z-index: 10000;
+	}
+	&__bottom{
+		position: absolute;
+		bottom: 793px;
+	}
+}
+
+.modal-padding{ 
+	padding-right: 17px;
 }

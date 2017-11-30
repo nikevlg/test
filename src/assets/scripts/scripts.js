@@ -13,7 +13,7 @@ window.onresize = function(event) {
   } else {
     $('.video-js').removeClass('video__mobile--albom');
    // return $('.play-btn-js').removeClass('video__mobile__play-btn');
-  }
+ }
 };
 
 // Calculator
@@ -23,9 +23,9 @@ var calculatorData = {
   cellClassNames: ['js-column-pterodactyl','js-column-mastodon','js-column-tyrannosaurus'],
   buttonClassNames: ['js-button-pterodactyl','js-button-mastodon','js-button-tyrannosaurus'],
   description:['Тариф для тех, кому не приходится <br>сталкиваться с бумажной <br> волокитой ежедневно. Доступ <br> ко всей базе юридических <br> документов Doczilla без <br> ' + 
-                      'абонентской платы, платите <br> только за нужные вам документы.',
-               'Ежедневная подготовка документов больше не будет вас удручать. Получите неограниченный доступ ко всем документам стандартного типа <br> с тарифом «Мастодонт».',
-               'Ультимативное решение всех проблем с оформлением юридических документов любого уровня. Безграничный доступ <br> ко всей базе сервиса Doczilla.'],
+  'абонентской платы, платите <br> только за нужные вам документы.',
+  'Ежедневная подготовка документов больше не будет вас удручать. Получите неограниченный доступ ко всем документам стандартного типа <br> с тарифом «Мастодонт».',
+  'Ультимативное решение всех проблем с оформлением юридических документов любого уровня. Безграничный доступ <br> ко всей базе сервиса Doczilla.'],
   taxPerMonth: [[0, 0, 0, 0], [1700, 1200, 1100, 1000], [2100, 1500, 1400, 1300]],
   monthAmounts: [1, 3, 6, 12],  
   monthEnds: ['месяц', 'месяца', 'месяцев', 'месяцев'],
@@ -109,8 +109,63 @@ var calculatorData = {
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   calculatorData.init();
+  initFloatingBlock();
+  modalPadding();
 });
 // End calculator
+
+// Floating block
+var initFloatingBlock;
+initFloatingBlock = function() {
+  var bottomPosition, firstBlock, floatingBlock, lastBlock, topPosition, updatePosition;
+  floatingBlock = $($('.js-float-block')[0]);
+  firstBlock = $('#promo')[0];
+  lastBlock = $('#start')[0];
+  topPosition = $(firstBlock).offset().top + $(firstBlock).outerHeight();
+  bottomPosition = $(lastBlock).offset().top;
+  updatePosition = function() {
+    var currentScrollPosition;
+    currentScrollPosition = $(document).scrollTop() + $(window).height();
+    if (currentScrollPosition >= bottomPosition) {
+      floatingBlock.removeClass('js-float-block__fixed');
+      floatingBlock.css({
+        position: 'static'
+      });
+    }
+    if (currentScrollPosition > topPosition && currentScrollPosition < bottomPosition) {
+      floatingBlock.addClass('js-float-block__fixed');
+      floatingBlock.css({
+        position: 'fixed',
+        bottom: '0'
+      });
+    }
+    if (currentScrollPosition - topPosition <= floatingBlock.height()) {
+      return floatingBlock.css({
+        position: 'fixed',
+        bottom: (currentScrollPosition - topPosition - floatingBlock.height()) + 'px'
+      });
+    }
+  };
+  updatePosition();
+  return $(document).on('scroll', function() {
+    return updatePosition();
+  }); 
+};
+// End floating block
+
+// Modal dialog event
+modalPadding = function() {
+  $('.uk-modal').on({
+    'show.uk.modal': function(){      
+     $('.js-float-block__fixed').children().addClass('modal-padding');
+   }, 
+   'hide.uk.modal': function(){ 
+    $('.js-float-block__fixed').children().removeClass('modal-padding');
+  }
+});
+}
+// End modal dialog event
+
 
 //  Youtube player
 var firstScriptTag, onPlayerReady, player, tag;
@@ -136,7 +191,6 @@ onPlayerReady = function() {
     return player.playVideo();
   });
 };
-
 //  End youtube player
 
 // Recapcha
