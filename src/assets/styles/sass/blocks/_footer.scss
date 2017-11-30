@@ -126,6 +126,11 @@
 						font-size: 14px;
 						color: $color-red;
 					}
+					.success-message{
+						position: absolute;
+						font-size: 14px;
+						color: $color-green;
+					}
 				}
 				.button{
 					padding: 0 15px;
