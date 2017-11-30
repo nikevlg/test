@@ -22,32 +22,32 @@
 			<a href="tel:88007000816" class="doc-icon doc-icon-phone phone"></a> 		 
 			<a href="DYNAMIC_URL_FREE_FORMS" class="doc-icon doc-icon-login"></a> 		 
 		</div>
-		<div class="uk-navbar-flip navigate__phone uk-hidden-small">
+		<div class="uk-navbar-flip navigate__phone uk-hidden-small" id="js-callback-toggle">
 			<a href="#">8 (800) 700 08 16</a>
 		</div>
 		<!--Форма заказа обратного звонка--> 
-		<form class="navigate__callback ">  <!-- для отображения окна класс navigate__callback--active -->			
+		<form class="navigate__callback" id="js-form-callback">  <!-- для отображения окна класс navigate__callback--active -->			
 			<h3>Заказать обратный <br>
 				звонок
 			</h3>
 			<div class="navigate__callback__input-wrapper">
-				<input type="text" placeholder="Имя">
-				<span>Введите имя</span>
+				<input type="text" placeholder="Имя" id="js-callback-name">
+				<span id="js-callback-name-error"></span>
 			</div>	
 			<div class="navigate__callback__input-wrapper">
-				<input type="text" placeholder="E-mail">
-				<span>Введите корректный e-mail</span>
+				<input type="text" placeholder="E-mail" id="js-callback-email">
+				<span id="js-callback-email-error"></span>
 			</div>	
 			<div class="navigate__callback__input-wrapper">
-				<input type="text" placeholder="+7 000 000 00 00">
-				<span>Неверный формат</span>
+				<input type="text" placeholder="+7 000 000 00 00" id="js-callback-phone">
+				<span id="js-callback-phone-error"></span>
 			</div>
 			<div class="navigate__callback__input-wrapper">
 				<div id="callback-recaptcha" data-sitekey="6Lezxx4UAAAAAEYE_GgthpGKn-qirqme8FbykCLf" class="g-recaptcha"></div>
-				<span>Пройдите проверку</span>
+				<span id="js-callback-success-error"></span>
 			</div>
 			<div class="navigate__callback__button-wrapper">
-				<button class="button button--normal button--green-hover" type="button">Заказать звонок</button>
+				<button class="button button--normal button--green-hover" type="submit">Заказать звонок</button>
 			</div>
 		</form>
 		<!--/Форма заказа обратного звонка-->
