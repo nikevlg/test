@@ -82,14 +82,6 @@ urlPaths = {
     ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru/'],
     ['DYNAMIC_URL_ADVICES', 'https://doczilla.obt-vlg.ru/#/bookAdvice'],
     ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/#/userHelp#0&1']
-  ],
-  dev: [
-    ['DYNAMIC_URL_PROMO_PAGE', 'https://promo.obt-vlg.ru'],
-    ['DYNAMIC_URL_REQUEST_API', 'https://doczilla.obt-vlg.ru'],
-    ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.obt-vlg.ru/#/Branch/free'],
-    ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru/'],
-    ['DYNAMIC_URL_ADVICES', 'https://doczilla.obt-vlg.ru/#/bookAdvice'],
-    ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/#/userHelp#0&1']
   ]
 };
 

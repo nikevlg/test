@@ -5,6 +5,9 @@
 			background-color: #fff;
 			margin: 0 20px;
 			text-align: center;
+			@include small-screen(){
+				margin: auto;	
+			}
 		}
 	}
 }

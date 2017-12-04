@@ -1,13 +1,13 @@
 
 .video{
-	background: rgba(102,204,153,1);
-	background: linear-gradient(to bottom, rgba(102,204,153,1) 0%, rgba(77,121,163,1) 25%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66cc99', endColorstr='#4d79a3', GradientType=0 );
+	background: $color-blue-dark;
+		box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25); 
+	/* background: linear-gradient(to bottom, rgba(102,204,153,1) 0%, rgba(77,121,163,1) 25%); */
+	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66cc99', endColorstr='#4d79a3', GradientType=0 );
 	&__desctop{
 		margin-top: 60px;
-		margin-bottom: 50px;
+		margin-bottom: 90px;
 		&__title{
-			@extend %roboto_medium;
 			margin: 60px 0;   
 			padding: 0 10px;
 			text-align: center;

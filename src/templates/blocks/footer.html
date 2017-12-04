@@ -5,20 +5,20 @@
 			<div class="footer__bottom-menu  uk-width-large-1-3 uk-width-medium-1-3">
 				<ul>
 					<li><h4>Doczilla</h4></li>
-					<li><a href="">Перейти к документам</a></li>
-					<li><a href="">Заказать звонок</a></li>
-					<li><a href="">Авторизоваться</a></li>
+					<li><a href="DYNAMIC_URL_FREE_FORMS">Перейти к документам</a></li>
+					<li><span class=" js-callback-toggle--open">Заказать звонок</span></li>
+					<li><a href="DYNAMIC_URL_FREE_FORMS">Авторизоваться</a></li>
 				</ul>
 			</div>
 			<div class="footer__bottom-menu  uk-width-large-1-3 uk-width-medium-1-3">
 				<ul>
 					<li><h4>Конструктор договоров</h4></li>
-					<li><a href="">Войти</a></li>
-					<li><a href="">Личный кабинет</a></li>
-					<li><a href="">Бесплатные документы</a></li>
-					<li><a href="">Консультации</a></li>
-					<li><a href="">Поддержка</a></li>
-					<li><a href="">Справка</a></li>
+					<li><a href="DYNAMIC_URL_MAIN_PAGE">Войти</a></li>
+					<li><a href="DYNAMIC_URL_MAIN_PAGE">Личный кабинет</a></li>
+					<li><a href="DYNAMIC_URL_FREE_FORMS">Бесплатные документы</a></li>
+					<li><a href="DYNAMIC_URL_ADVICES">Консультации</a></li>
+					<!-- <li><a href="">Поддержка</a></li> -->
+					<li><a href="DYNAMIC_URL_USER_HELP">Справка</a></li>
 				</ul>
 			</div>
 			<div class="footer__bottom-menu  uk-width-large-1-3 uk-width-medium-1-3">
@@ -37,26 +37,29 @@
 			</div> 
 		</div>
 		<!--/Desctop footer menu-->
+		
 		<!--Mobile footer menu--> 
 		<div class="footer__menu footer__menu--mobile uk-grid uk-visible-small">
-			<div class="uk-accordion uk-container-center" data-uk-accordion={collapse: true}> 
+			<div class="uk-accordion uk-container-center" data-uk-accordion={showfirst:false}> 
 				<h3 class="uk-accordion-title">Doczilla <i class="uk-icon-chevron-down uk-align-right"></i> </h3>
 				<div class="uk-accordion-content">
 					<ul>
-					<li><a href="">Перейти к документам</a></li>
-					<li><a href="">Заказать звонок</a></li>
-					<li><a href="">Авторизоваться</a></li>
+						<li><h4>Doczilla</h4></li>
+						<li><a href="DYNAMIC_URL_FREE_FORMS">Перейти к документам</a></li>
+						<li><span class=" js-callback-toggle--open">Заказать звонок</span></li>
+						<li><a href="DYNAMIC_URL_FREE_FORMS">Авторизоваться</a></li>
 					</ul>
 				</div>
 				<h3 class="uk-accordion-title">Конструктор договоров <i class="uk-icon-chevron-down uk-align-right"></i></h3>
 				<div class="uk-accordion-content">
 					<ul>
-						<li><a href="">Войти</a></li>
-						<li><a href="">Личный кабинет</a></li>
-						<li><a href="">Бесплатные документы</a></li>
-						<li><a href="">Консультации</a></li>
-						<li><a href="">Поддержка</a></li>
-						<li><a href="">Справка</a></li>
+						<li><h4>Конструктор договоров</h4></li>
+						<li><a href="DYNAMIC_URL_MAIN_PAGE">Войти</a></li>
+						<li><a href="DYNAMIC_URL_MAIN_PAGE">Личный кабинет</a></li>
+						<li><a href="DYNAMIC_URL_FREE_FORMS">Бесплатные документы</a></li>
+						<li><a href="DYNAMIC_URL_ADVICES">Консультации</a></li>
+						<!-- <li><a href="">Поддержка</a></li> -->
+						<li><a href="DYNAMIC_URL_USER_HELP">Справка</a></li>
 					</ul></div>
 					<h3 class="uk-accordion-title">Контакты <i class="uk-icon-chevron-down uk-align-right"></i></h3>
 					<div class="uk-accordion-content"><ul>
@@ -84,7 +87,7 @@
 									<tr>
 										<td>
 											<input type="text" class="js-remove-error" placeholder="Имя" id="js-questions-name"> <br> 
-											<input type="text" class="js-remove-error" placeholder="e-mail" id="js-questions-email">
+											<input type="text" class="js-remove-error" placeholder="E-mail" id="js-questions-email">
 										</td>
 										<td rowspan="3" class="text">
 											<textarea placeholder="Напишите тут что-нибудь" id="js-questions-text"></textarea>

@@ -1,3 +1,35 @@
 .content-inside{
 	padding: 15px;
 }
+
+::-webkit-scrollbar-button {
+background-image:url('');
+background-repeat:no-repeat;
+width:8px;
+height:0px
+}
+
+::-webkit-scrollbar-track {
+background-color:#ecedee
+}
+
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 0px;
+border-radius: 4px;
+background-color:#b3c4d8;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background-color:#b3c4d8;
+}
+
+::-webkit-resizer{
+background-image:url('');
+background-repeat:no-repeat;
+width:8px;
+height:0px
+}
+
+::-webkit-scrollbar{
+width: 8px;
+}

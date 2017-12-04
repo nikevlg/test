@@ -1,7 +1,6 @@
 .advantage{
 	margin-top: 30px;
 	padding-bottom: 30px;
-	box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
 	&__desctop{
 		&__block{
 			min-height: 350px;
@@ -39,12 +38,12 @@
 			background-color: #fff;
 			box-shadow: 0px 0px 21px 8px rgba(0,0,0,0.16);
 			img{
-				width: 140px;
-				height: 140px;
+				width: 100px;
+				height: 100px;
 			}
 			h2{
 				@extend %roboto_medium;
-				margin: 30px 0 40px 0;
+				margin: 30px 0 0px 0;
 				font-size: 36px;
 				line-height: 1.3;
 				color: $color-blue-dark;
@@ -60,5 +59,9 @@
 		.mobile-slider {
 			padding: 0;
 		}
+	}
+	@include small-screen(){
+		margin: 0;	
+		padding-bottom: 0;
 	}
 }   

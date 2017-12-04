@@ -32,9 +32,9 @@ function initCalculator() {
   var buttonClassNames = ['js-button-pterodactyl','js-button-mastodon','js-button-tyrannosaurus'];
   var description = ['Тариф для тех, кому не приходится <br>сталкиваться с бумажной <br> волокитой ежедневно. Доступ <br> ко всей базе юридических <br> документов Doczilla без <br> ' + 
   'абонентской платы, платите <br> только за нужные вам документы.',
-  'Ежедневная подготовка документов больше не будет вас удручать. Получите неограниченный доступ ко всем документам стандартного типа <br> с тарифом «Мастодонт».',
-  'Ультимативное решение всех проблем с оформлением юридических документов любого уровня. Безграничный доступ <br> ко всей базе сервиса Doczilla.'];
-  var taxPerMonth = [[0, 0, 0, 0], [1700, 1200, 1100, 1000], [2100, 1500, 1400, 1300]];
+  'Ежедневная  подготовка документов больше не будет <br> вас удручать. Получите неограниченный доступ ко всем документам стандартного типа <br> с тарифом «Мастодонт».', 
+  'Ультимативное решение всех проблем с оформлением юридических документов любого уровня. Безграничный доступ <br> ко всей базе сервиса Doczilla.'];  
+  var taxPerMonth = [[0, 0, 0, 0], [1700, 1200, 1100, 1000], [2100, 1500, 1400, 1300]]; 
   var monthAmounts = [1, 3, 6, 12];
   var monthCellElements = $('.js-month');
 
@@ -72,7 +72,7 @@ function initCalculator() {
     $('.' + buttonClassNames[index]).removeClass('button--white');
     $('.' + buttonClassNames[index]).addClass('button--green');
 
-    $('.js-tariff-description').text(description[index]);
+    $('.js-tariff-description').html(description[index]);
     if (index == 0) {
       $('.js-months-area').addClass('select-date--mute');
       $('.js-mastodon-tyrannosaurus-selected').hide();
@@ -114,6 +114,9 @@ initFloatingBlock = function() {
   floatingBlock = $($('.js-float-block')[0]);
   firstBlock = $('#promo')[0];
   lastBlock = $('#start')[0];
+  if(!firstBlock || !lastBlock){
+    return;
+  }
   topPosition = $(firstBlock).offset().top + $(firstBlock).outerHeight();
   bottomPosition = $(lastBlock).offset().top;
   updatePosition = function() {
@@ -161,17 +164,24 @@ var modalPadding = function() {
 
 // Callback popup
 function initCallbackPopup() {
-  var toggleElement = $('#js-callback-toggle');
   var callbackPopup = $('#js-form-callback');
-  toggleElement.click(function(event) {
+  $('#js-callback-toggle').click(function(event) {
     event.preventDefault();
     callbackPopup.toggleClass('navigate__callback--active');    
   });
-  $('main').click(function(){
-    callbackPopup.removeClass('navigate__callback--active');
+  $('.js-callback-toggle--open').click(function(event) {
+    event.preventDefault();
+    callbackPopup.addClass('navigate__callback--active');    
   });
-  $('.footer').click(function(){
-    callbackPopup.removeClass('navigate__callback--active');
+  $('main').click(function(e){
+    if (!$(e.target).hasClass('js-callback-toggle--open')) {
+      callbackPopup.removeClass('navigate__callback--active');
+    }
+  });
+  $('.footer').click(function(e){
+    if (!$(e.target).hasClass('js-callback-toggle--open')) {
+      callbackPopup.removeClass('navigate__callback--active');
+    }
   }); 
 }
 // End callback popup
@@ -186,6 +196,7 @@ function initForms() {
   $('.js-remove-error').click(function(e){
     e.preventDefault();
     $(this).removeClass('input-error');
+    $('.error-message').text('');
     $('.error-message').removeClass('error-message');
     $('.success-message').removeClass('success-message');
   })

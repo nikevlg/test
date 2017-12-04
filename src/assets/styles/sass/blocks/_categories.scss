@@ -1,0 +1,126 @@
+.categories{
+	&>div{
+		height: 100%;
+		padding: 0 10px;		
+	}
+	&__desctop{
+		@include small-screen(){
+			display: none;
+		}
+		&__wrapper{
+			display: grid;
+			grid-template-columns: 220px 1fr;
+			display: -ms-grid;
+			-ms-grid-columns: 220px 1fr;
+			-ms-grid-rows: 1fr;  
+			width: 100%;
+			margin: 15px 0; 
+			ul{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.category-list{
+				height: calc(100vh - 105px);
+				width: auto; 
+				grid-column: 1;
+				grid-row: 1;
+				-ms-grid-column: 1;
+				-ms-grid-row: 1;
+				padding-right: 10px;
+				overflow-x: hidden; 
+				overflow-y: scroll; 
+				li{
+					display: block;
+					margin: 6px 0;				
+					border-radius: 4px;
+					background-color: #e2e6f0;
+					cursor: pointer;
+					font-size: 16px;
+					color: #666;
+					&:hover{
+						background-color: #b3c4d8;
+						color: #fff; 
+						a{
+							color: #fff; 
+						}
+					}
+					&.active{
+						background-color: $color-green;
+						color: #fff; 
+						a{
+							color: #fff; 
+						}
+					} 
+					a{
+						display: block;
+						padding: 10px 20px; 
+						text-decoration: none;
+						color: #666;
+					}
+				}
+			}
+			.doc-list{
+				height: calc(100vh - 120px);
+				grid-column: 2;
+				grid-row: 1;
+				-ms-grid-row: 1;
+				-ms-grid-column: 2;
+				overflow-x: hidden; 
+				overflow-y: scroll; 
+				padding: 5px 10px 10px 10px;
+				li{
+					display: block;
+				}
+				&__title{
+					position: relative;
+					background-color: $color-blue-dark;
+					padding: 10px 40px;
+					color: #fff;
+					border-radius: 4px;
+					span{
+						position: absolute;
+						right: 20px;
+						top: 7px;
+						text-align: right;
+						font-size: 12px;
+						line-height: 1; 						
+						opacity: 0.4;
+					}
+				}
+				&__doc{
+					margin: 10px 20px;
+					font-size: 14px;
+					border: 1px solid #b3c4d8; 
+					border-radius: 4px;	
+					a{
+						display: block;
+						padding: 6px 160px 6px 30px;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						color: #666;
+						&:hover{
+							border-radius: 4px;
+							background-color: #eaeaea;
+						}
+					}
+					&--exp{
+						background-image: url(../images/expert.png),linear-gradient(-45deg,#fff 0,#fff 100%);						
+						background-repeat: no-repeat;
+						background-position: 100% 100%;
+						background-size: 148px 28px;
+						a{
+							&:hover{
+								background-image: url(../images/expert.png),linear-gradient(-45deg,#eaeaea 0,#eaeaea 100%);	
+								background-repeat: no-repeat;
+								background-position: 100% 100%;
+								background-size: 148px 28px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
