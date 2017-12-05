@@ -1,30 +1,44 @@
 <header data-uk-sticky class="navigate uk-navbar">
 	<nav class="uk-container uk-container-center" role="navigation">
-		<a href="./" class="uk-navbar-brand__mobile  uk-visible-small"><img src="assets/images/head-promo-logo.png" alt="Doczilla"></a>
-		<a href="./" class="uk-navbar-brand uk-hidden-small"><img src="assets/images/head-promo-logo.png" alt="Doczilla"></a>
-		<div class="uk-navbar-content uk-hidden-small phys_nav">
-			<a href="#" class="uk-hidden-large  uk-hidden">Для физ. лиц</a>
-			<a href="#" class="uk-visible-large  uk-hidden">Для физических лиц</a>
-		</div>
-		<div class="uk-navbar-content uk-hidden-small gos_nav">
-			<a href="#" class="uk-hidden-large  uk-hidden">Для гос. сектора</a>
-			<a href="#" class="uk-visible-large  uk-hidden">Для государственного сектора</a>
-		</div>
-		<!-- <div class="uk-navbar-content uk-hidden-small yur_nav">
-			<a href="#">Для бизнеса</a>
-		</div>  -->
-		<div class="uk-navbar-flip uk-hidden-small">
-			<div class="uk-button-group navigate__login">
-				<a href="DYNAMIC_URL_FREE_FORMS" class="button  button--green-hover uk-hidden-small">Войти</a> 
+		<div class="navigate__desctop">
+			<a href="./" class="uk-navbar-brand">
+				<img src="assets/images/head-promo-logo.png" alt="Doczilla">
+			</a>
+			<div class="uk-navbar-flip">
+				<div class="uk-button-group navigate__desctop__login">
+					<a href="DYNAMIC_URL_FREE_FORMS" class="button  button--green-hover">Войти</a> 
+				</div>
 			</div>
-		</div>
-		<div class="uk-navbar-flip uk-visible-small button-mobile">
-			<a href="tel:88007000816" class="doc-icon doc-icon-phone phone"></a> 		 
-			<a href="DYNAMIC_URL_FREE_FORMS" class="doc-icon doc-icon-login"></a> 		 
-		</div>
-		<div class="uk-navbar-flip navigate__phone uk-hidden-small" id="js-callback-toggle">
-			<a href="#">8 (800) 700 08 16</a>
-		</div>
+			<div class="uk-navbar-flip navigate__desctop__phone" id="js-callback-toggle">
+				<a href="#">8 (800) 700 08 16</a>
+			</div>
+		</div>	
+
+
+		<div class="navigate__mobile">
+			<a href="./" class="uk-navbar-brand">
+				<img src="assets/images/head-promo-logo.png" alt="Doczilla">
+			</a>
+			<div class="uk-navbar-flip uk-visible-small navigate__mobile__button">
+				<a href="tel:88007000816" class="doc-icon doc-icon-phone"></a> 		 
+				<a href="DYNAMIC_URL_FREE_FORMS" class="doc-icon doc-icon-login"></a> 		 
+			</div>
+		</div>	
+
+		
+	<!-- 		<div class="uk-navbar-content uk-hidden-small phys_nav">
+		<a href="#" class="uk-hidden-large  uk-hidden">Для физ. лиц</a>
+		<a href="#" class="uk-visible-large  uk-hidden">Для физических лиц</a>
+	</div> -->
+	<!-- 		<div class="uk-navbar-content uk-hidden-small gos_nav">
+		<a href="#" class="uk-hidden-large  uk-hidden">Для гос. сектора</a>
+		<a href="#" class="uk-visible-large  uk-hidden">Для государственного сектора</a>
+	</div> -->
+			<!-- <div class="uk-navbar-content uk-hidden-small yur_nav">
+				<a href="#">Для бизнеса</a>
+			</div>  -->
+	
+
 		<!--Форма заказа обратного звонка--> 
 		<form class="navigate__callback" id="js-form-callback">  <!-- для отображения окна класс navigate__callback--active -->			
 			<h3>Заказать обратный <br>

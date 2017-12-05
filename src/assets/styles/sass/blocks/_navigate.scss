@@ -5,7 +5,6 @@
 	box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25); 
 }
 .navigate{
-	// position: fixed;
 	width: 100%;
 	padding-top: 7px;
 	padding-bottom: 7px;
@@ -15,76 +14,53 @@
 		padding: 0 10px; 
 		position: relative;
 	}
-	.uk-navbar-brand {
-		width: 170px;
-		padding: 10px 0 0 0;
-		&__mobile{ 
-			display: inline-block;
-			width: 100%;
-			img{
-				width: 195px;
-			}			
-		}
-	} 
-	.uk-navbar-flip{
-		padding: 3px 0; 
-	}
-	.phys_nav, .gos_nav, .yur_nav{ 
-		padding: 16px;
-		a{
-			font-size: 16px; 
-		}
-	}	
-	&__phone{		
-		padding: 16px 0 !important;		
-		a{
-			font-size: 16px;
+	.uk-navbar-brand{
+		padding: 0;
+		width: 200px;
+		img{
+			width: 195px;
 		}
 	}
-	&__login{
-		margin-left: 15px; 
-	}
-	@include Xlarge-screen (){	
-		.uk-navbar-brand {
-			margin-right: 25px;
+	&__desctop{
+		display: block;
+		@include small-screen(){
+			display: none;
 		}
-		&__phone{
-			margin-right: 25px;
-		}
-	}
-	@include small-screen (){	
-		padding: 12px 20px;
-		.uk-navbar-brand {
-			width: 160px;
-			padding: 6px 0 0 0;
-			&__mobile{
-				display: inline-block;
-				width: 160px;
-				padding-top: 5px;
-				img{
-					width: 160px;
-				}			
+		&__phone{		
+			padding: 11px 0;		
+			a{
+				font-size: 16px;
 			}
-		} 
-		.uk-navbar-flip{
-			display: inline-block; 
-			width: calc(100% - 235px);
-			text-align: right;
-			min-width: 75px;
-			padding: 0;
-			text-align: right;
+		}
+		&__login{
+			margin-left: 15px; 
+		}
+		@include Xlarge-screen (){	
+			&__phone{
+				margin-right: 25px;
+			}
+		}
+	}
+	&__mobile{
+		display: none;
+		@include small-screen(){
+			display: block;
+		}
+		&__button{
+			margin-top: 5px;
 			a{
 				height: 26px;
 				text-decoration: none !important;
 				&::before{
 					font-size: 26px
 				}
+				&.doc-icon-phone{
+					margin-right: 15px;
+				}
 			}
 		}
-		.phone{
-			margin-right: 15px; 
-		}
 	}
+	
 	&__callback{
 		display: none;
 		position: absolute;
