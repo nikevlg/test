@@ -23,6 +23,9 @@
 		text-align: center;
 		a{
 			margin: 15px; 
+			&:last-child{
+				margin: 15px; 
+			}
 		}
 		.button{
 			background-color: $color-blue-dark; 

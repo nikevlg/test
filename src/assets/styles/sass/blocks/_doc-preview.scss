@@ -1,6 +1,8 @@
 .doc-preview{	
-	height: 100%;
-	padding: 0 10px;	
+	&>div{
+		padding: 0 10px; 
+	}
+	height: 100%;	
 	&__desctop{
 		@include small-screen(){
 			display: none;

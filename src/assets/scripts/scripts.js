@@ -16,12 +16,29 @@ window.onresize = function(event) {
  }
 };
 
-$(document).ready(function() { 
-  initCalculator();
-  initFloatingBlock();
-  modalPadding();
-  initCallbackPopup();
-  initForms();
+$(document).ready(function() {  
+  if (location.pathname == "/") {  // promo
+    initCalculator();
+    initFloatingBlock();
+    modalPadding();
+    initCallbackPopup();
+    initForms();
+  }
+  else { // category    
+    var anchorIndex = location.href.indexOf('#');
+    if (anchorIndex >=0) {
+      var anchor = location.href.substr(anchorIndex + 1);
+      var elem = $('[name="' + anchor + '"]');
+      elem.addClass('active');
+    }
+    else {
+      $($('li[name]')[0]).addClass('active');
+    }
+    $('li[name]').click(function(){
+      $('li[name]').removeClass('active');
+      $(this).addClass('active');
+    });
+  }
 });
 
 // Calculator
