@@ -1,12 +1,12 @@
 
 .page_404 {
+	background: #2c6093;
+	background-image: url('../images/pattern.png'), linear-gradient(-45deg, #2c6093 0%, #6699cc 100%);
+	color: #fff; 
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	background: #2c6093;
-	background-image: url('../images/pattern.png'), linear-gradient(-45deg, #2c6093 0%, #6699cc 100%);
-	color: #fff;
 	font-size: 18px;
 	line-height: 1;
 	.logo {
@@ -23,21 +23,27 @@
 		height: 450px;
 		margin: auto;
 		text-align: center;
-		.font_large {
+		.font_large { 
 			font-size: 235px;
+			@include small-screen(){
+				font-size: 180px;	
+			}
 		}
 		.font_medium {
 			font-size: 40px;
+			@include small-screen(){
+				font-size: 32px;	
+			}
 		}
 		.text_small {
-			width: 550px;
+			max-width: 550px;
 			margin: 50px;
 			line-height: 1.5;
 		}
 	}
 	.footer {
 		display: flex;
-		flex-direction: row;
+		flex-direction: row; 
 		justify-content: space-between;
 		.telephone {
 			padding: 25px;
