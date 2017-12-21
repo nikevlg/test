@@ -73,7 +73,8 @@ urlPaths = {
     ['DYNAMIC_URL_FREE_FORMS', 'https://forms.doczilla.ru/#/Branch/free'],
     ['DYNAMIC_URL_MAIN_PAGE', 'https://forms.doczilla.ru/'],
     ['DYNAMIC_URL_ADVICES', 'https://forms.doczilla.ru/#/bookAdvice'],
-    ['DYNAMIC_URL_USER_HELP', 'https://forms.doczilla.ru/#/userHelp#0&1']
+    ['DYNAMIC_URL_USER_HELP', 'https://forms.doczilla.ru/#/userHelp#0&1'],
+    ['DYNAMIC_URL_TARIFFS', 'https://forms.doczilla.ru/#/tariffs']
   ],
   test: [
     ['DYNAMIC_URL_PROMO_PAGE', 'https://promo.obt-vlg.ru'],
@@ -81,7 +82,8 @@ urlPaths = {
     ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.obt-vlg.ru/#/Branch/free'],
     ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru/'],
     ['DYNAMIC_URL_ADVICES', 'https://doczilla.obt-vlg.ru/#/bookAdvice'],
-    ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/#/userHelp#0&1']
+    ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/#/userHelp#0&1'],
+    ['DYNAMIC_URL_TARIFFS', 'https://doczilla.obt-vlg.ru/#/tariffs']
   ]
 };
 

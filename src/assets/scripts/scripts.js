@@ -102,7 +102,7 @@ function initCalculator() {
     }
     selectedTariff = index; 
     updatePrice();     
-  }
+  } 
 
   function updatePrice() {
     var pricePerMonth = taxPerMonth[selectedTariff][selectedMonthIndex];
@@ -110,10 +110,15 @@ function initCalculator() {
     var price = pricePerMonth * monthsAmount;
     var economy = taxPerMonth[selectedTariff][0] * monthsAmount - price;
     $('.js-price-per-month').text('Цена за 1 месяц: ' + pricePerMonth.toLocaleString() + ' руб.');
+    if (selectedTariff > 0) {
+      var href = $('.js-mastodon-tyrannosaurus-selected').attr('href');     
+      var newHref = href.substr(0, href.indexOf('?')) + '?tariff=' + (3-selectedTariff) + '&months=' + monthsAmount;      
+      $('.js-mastodon-tyrannosaurus-selected').attr('href', newHref);
+    }
     if (economy > 0 || selectedTariff == 0) {
       $('.js-economy-big').show();
       $('.js-economy-big').text('Экономия: ' + economy.toLocaleString() + ' руб.');
-      $('.js-economy-small').hide();
+      $('.js-economy-small').hide(); 
     }
     else {
       $('.js-economy-big').hide();
