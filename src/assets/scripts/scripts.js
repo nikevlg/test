@@ -112,7 +112,7 @@ function initCalculator() {
     $('.js-price-per-month').text('Цена за 1 месяц: ' + pricePerMonth.toLocaleString() + ' руб.');
     if (selectedTariff > 0) {
       var href = $('.js-mastodon-tyrannosaurus-selected').attr('href');     
-      var newHref = href.substr(0, href.indexOf('?')) + '?tariff=' + (3-selectedTariff) + '&months=' + monthsAmount;      
+      var newHref = href.substr(0, href.indexOf('?')) + '?tariff=' + (3-selectedTariff) + '&months=' + selectedMonthIndex;
       $('.js-mastodon-tyrannosaurus-selected').attr('href', newHref);
     }
     if (economy > 0 || selectedTariff == 0) {
