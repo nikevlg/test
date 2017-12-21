@@ -17,4 +17,11 @@
 		line-height: 1.5;
 
 	}
+	.modal_link{
+		outline: none;
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
+		}
+	}
 }
