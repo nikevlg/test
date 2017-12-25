@@ -297,15 +297,14 @@ function initForms() {
           }
         }
       });
-      xhr.open('POST', 'DYNAMIC_URL_REQUEST_API/api/promo/callback/order', true);
+      xhr.open('POST', 'DYNAMIC_URL_REQUEST_API/api/callback/order', true);
       xhr.setRequestHeader('content-type', 'application/json'); 
       xhr.send(JSON.stringify({
         name: name.val(),
         recaptcha: recaptcha,
         email: email.val(),
         phone: phone.val(),
-        timeTo: 23,
-        timeFrom: 0})
+        callTime: null})
       );
     }
   });
