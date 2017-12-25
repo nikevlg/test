@@ -310,6 +310,11 @@ function initForms() {
     }
   });
 
+  var phoneInputs = document.querySelectorAll(".phone-mask"); 
+  $(phoneInputs).mask("+7 (999) 999-9999", {
+    placeholder: "+7 (000) 000-0000"
+  });
+
   $('#js-form-questions').on('submit', function(event) {
     event.preventDefault();
     var name = $('#js-questions-name');
