@@ -47,8 +47,8 @@
 		flex-direction: row; 
 		justify-content: space-between;
 		@include small-screen(){
-				display: none;
-			}
+			display: none;	
+		}		
 		.telephone {
 			padding: 25px;
 		}
