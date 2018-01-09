@@ -17,12 +17,12 @@ window.onresize = function(event) {
 };
 
 $(document).ready(function() {  
+  initCallbackPopup();
+  initForms();
   if (location.pathname == "/") {  // promo
     initCalculator();
     initFloatingBlock();
     modalPadding();
-    initCallbackPopup();
-    initForms();
   }
   else { // category    
     var anchorIndex = location.href.indexOf('#');

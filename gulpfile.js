@@ -105,7 +105,7 @@ metaTags = {
 gulp.task('robots-sitemap', function() {
   var version = args.argv.mode === 'prod' ? 'prod':'test';
   if (version === 'prod') {
-    return gulp.src(['./src/robots.txt', './src/sitemap.xml']).pipe(gulp.dest('./build/prod/'));
+    return gulp.src(['./src/robots.txt', './src/sitemap.xml']).pipe(gulp.dest('./build/'));
   };
 });
 
