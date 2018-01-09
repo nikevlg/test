@@ -1,14 +1,359 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-            xmlns:xhtml="http://www.w3.org/1999/xhtml"   
-            >
-      <url>
-        <loc>https://doczilla.ru/</loc>
-        <xhtml:link rel="alternate" hreflang="ru" href="https://doczilla.ru"/>
-        <lastmod>2017-08-14T14:52:19+00:00</lastmod>
-      </url>
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>https://doczilla.ru/</loc>
+  <lastmod>2017-12-29T15:14:37+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/categories.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-naima-zhilogho-pomieshchieniia-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-oborudovaniia-ramochnyi,-po-zaiavkam.html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-oborudovaniia-na-srok.html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-oborudovaniia-ramochnyi,-po-zaiavkam-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-spietstiekhniki-s-ekipazhiem,-ramochnyi,-po-zaiavkam-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-spietstiekhniki-s-ekipazhiem-(po-zaiavkam).html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-spietstiekhniki,-na-srok-(biez-ekipazha)-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-spietstiekhniki,-na-srok-(s-ekipazhiem)-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-spietstiekhniki,-na-srok-(biez-ekipazha).html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-spietstiekhniki,-na-srok-(s-ekipazhiem).html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-oborudovaniia-na-srok-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-ariendy-zhilogho-(niezhilogho)-pomieshchieniia-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-biezvozmiezdnogho-polzovaniia-imushchiestvom-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-biezvozmiezdnogho-polzovaniia-imushchiestvom.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-darieniia-dvizhimogho-imushchiestva-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-darieniia-dvizhimogho-imushchiestva.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-darieniia-oborudovaniia-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-darieniia-oborudovaniia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-darieniia-oruzhiia-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-darieniia-oruzhiia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-darieniia-sudna-(korablia,-katiera,-lodki)-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-darieniia-sudna-(korablia,-katiera,-lodki).html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/zaiavlieniie-ob-otmienie-dovieriennosti.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/dovieriennost-ot-fizichieskogho-litsa-v-sud,-fssp.html</loc>
+  <lastmod>2017-12-29T20:55:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-tsielievogho-zaima-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-zaima-v-valiutie-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-zaima-(obshchii)-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-zaima-v-rubliakh-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-biesprotsientnogho-zaima-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-tsielievogho-zaima.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-zaima-v-rubliakh.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-zaima-v-valiutie.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-biesprotsientnogho-zaima.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-zaima-miezhdu-fizichieskimi-litsami.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-kupli-prodazhi-(obshchii).html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-roznichnoi-kupli-prodazhi-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-roznichnoi-kupli-prodazhi.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-kupli-prodazhi-(obshchii)-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-kupli-prodazhi-oruzhiia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-kupli-prodazhi-oruzhiia-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-kupli-prodazhi-sudna-(korablia,-katiera,-lodki)-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-kupli-prodazhi-sudna-(korablia,-katiera,-lodki).html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-kupli-prodazhi-avtomobilia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-kupli-prodazhi-avtomobilia-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-kupli-prodazhi-oborudovaniia-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-kupli-prodazhi-oborudovaniia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-zalogha-dvizhimogho-imushchiestva-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-zalogha-dvizhimogho-imushchiestva.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-ariendy.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-zaima.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-kupli-prodazhi.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-pierievozki.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-podriada.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-postavki.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-ariendy-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-zaima-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-kupli-prodazhi-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-pierievozki-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-podriada-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-poruchitielstva-k-doghovoru-postavki-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-okazaniia-kurierskikh-uslugh.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-vozmiezdnogho-okazaniia-uslugh-(obshchii)-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-vozmiezdnogho-okazaniia-uslugh-(obshchii).html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-okazaniia-iuridichieskikh-uslugh-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-okazaniia-iuridichieskikh-uslugh.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://doczilla.ru/doc/doghovor-okazaniia-kurierskikh-uslugh-dokumient-ekspiertnogho-urovnia.html</loc>
+  <lastmod>2017-12-29T20:55:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 </urlset>
