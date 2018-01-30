@@ -289,11 +289,11 @@ function initForms() {
             email.val('');
             phone.val('');
             message.addClass('success-message');
-            message.innerText = 'Ваш звонок был успешно заказан';
+            message.text('Ваш звонок был успешно заказан');
           }
           else { 
             message.removeClass('success-message');
-            message.innerText = 'Ошибка при заказе звонка';
+            message.text('Ошибка при заказе звонка');
           }
         }
       });
@@ -351,12 +351,12 @@ function initForms() {
             phone.val('');
             message.removeClass('error-message');
             message.addClass('success-message');
-            message.innerText = 'Ваш звонок был успешно заказан';
+            message.text('Ваш звонок был успешно заказан');
           }
           else { 
             message.removeClass('success-message');
             message.addClass('error-message');
-            message.innerText = 'Ошибка при заказе звонка';
+            message.text('Ошибка при заказе звонка');
           }
         }
       });
