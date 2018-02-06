@@ -220,6 +220,7 @@ function initForms() {
     $(this).removeClass('input-error');
     $('.error-message').text('');
     $('.error-message').removeClass('error-message');
+    $('.success-message').text('');
     $('.success-message').removeClass('success-message');
   })
 
@@ -281,10 +282,10 @@ function initForms() {
     if (allCorrect) {
       var xhr = new XMLHttpRequest();
       xhr.withCredentials = true 
-      xhr.addEventListener('readystatechange', function() {
+      xhr.addEventListener('readystatechange', function(data) {
         if (this.readyState == 4) {       
           grecaptcha.reset(callbackRecaptcha);
-          if (status == 200) {          
+          if (this.status == 200) {          
             name.val('');
             email.val('');
             phone.val('');
@@ -342,13 +343,13 @@ function initForms() {
     if (allCorrect) {
       var xhr = new XMLHttpRequest();
       xhr.withCredentials = true 
-      xhr.addEventListener('readystatechange', function() {
+      xhr.addEventListener('readystatechange', function(data) {
         if (this.readyState == 4) {       
           grecaptcha.reset(questionsRecaptcha);
-          if (status == 200) {          
+          if (this.status == 200) {          
             name.val('');
             email.val('');
-            phone.val('');
+            text.val('');
             message.removeClass('error-message');
             message.addClass('success-message');
             message.text('Ваш звонок был успешно заказан');

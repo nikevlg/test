@@ -74,7 +74,9 @@ urlPaths = {
     ['DYNAMIC_URL_MAIN_PAGE', 'https://forms.doczilla.ru/'],
     ['DYNAMIC_URL_ADVICES', 'https://forms.doczilla.ru/#/bookAdvice'],
     ['DYNAMIC_URL_USER_HELP', 'https://forms.doczilla.ru/#/userHelp#0&1'],
-    ['DYNAMIC_URL_TARIFFS', 'https://forms.doczilla.ru/#/tariffs']
+    ['DYNAMIC_URL_TARIFFS', 'https://forms.doczilla.ru/#/tariffs'],
+    ['DYNAMIC_URL_FORM_PRETENSION', 'https://forms.doczilla.ru/#/form/666'],
+    ['DYNAMIC_URL_FORM_CLAIM', 'https://forms.doczilla.ru/#/form/669']
   ],
   test: [
     ['DYNAMIC_URL_PROMO_PAGE', 'https://promo.obt-vlg.ru'],
@@ -83,7 +85,9 @@ urlPaths = {
     ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru/'],
     ['DYNAMIC_URL_ADVICES', 'https://doczilla.obt-vlg.ru/#/bookAdvice'],
     ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/#/userHelp#0&1'],
-    ['DYNAMIC_URL_TARIFFS', 'https://doczilla.obt-vlg.ru/#/tariffs']
+    ['DYNAMIC_URL_TARIFFS', 'https://doczilla.obt-vlg.ru/#/tariffs'],
+    ['DYNAMIC_URL_FORM_PRETENSION', 'https://doczilla.obt-vlg.ru/#/form/652'],
+    ['DYNAMIC_URL_FORM_CLAIM', 'https://doczilla.obt-vlg.ru/#/form/653']
   ]
 };
 
