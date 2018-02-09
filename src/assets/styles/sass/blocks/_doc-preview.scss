@@ -63,101 +63,98 @@
 				color: $color-blue-dark;
 				span{
 					font-size: 14px;
-					background-color: #4b9798;
-				/* IE9, iOS 3.2+ */
-				background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIxMDAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjNjZjYzk5IiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMyZjYyOTYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzJmNjI5NiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
-				background-image: -webkit-gradient(linear, 100% 0%, 0% 0%,color-stop(0, rgb(102, 204, 153)),color-stop(1, rgb(47, 98, 150)),color-stop(1, rgb(47, 98, 150)));
-				/* Android 2.3 */
-				background-image: -webkit-repeating-linear-gradient(right,rgb(102, 204, 153) 0%,rgb(47, 98, 150) 100%,rgb(47, 98, 150) 100%);
-				/* IE10+ */
-				background-image: repeating-linear-gradient(to left,rgb(102, 204, 153) 0%,rgb(47, 98, 150) 100%,rgb(47, 98, 150) 100%);
-				background-image: -ms-repeating-linear-gradient(right,rgb(102, 204, 153) 0%,rgb(47, 98, 150) 100%,rgb(47, 98, 150) 100%);
-				padding: 2px 6px;
-				position: relative;
-				font-family: Roboto;
-				color: #fff;
-				top: -4px;
-				box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
-				border-radius: 4px;
+					background: #66cc99;
+					background: -moz-linear-gradient(left, #66cc99 0%, #6699cb 100%);
+					background: -webkit-linear-gradient(left, #66cc99 0%,#6699cb 100%);
+					background: linear-gradient(to right, #66cc99 0%,#6699cb 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66cc99', endColorstr='#6699cb',GradientType=1 );
+					padding: 4px 15px; 
+					position: relative;
+					font-family: Roboto;
+					color: #fff;
+					top: -4px;
+					box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
+					border-radius: 4px; 
+					cursor: default;
+				}
+
+			}		
+			p{
+				margin: 0 ;
+				color: #666;
+				line-height: 1.5;
+				padding-bottom: 100px; 
+			}		
+
+			ul{    
+				padding-left: 30px;
+				margin: 0 0 20px 0;
+				li{
+					position: relative;
+					&:before {
+						content:  "—";
+						position: absolute;
+						left: -20px;
+					} 
+				}						
 			}
 
-		}		
-		p{
-			margin: 0 ;
-			color: #666;
-			line-height: 1.5;
-			padding-bottom: 100px; 
-		}		
-
-		ul{    
-			padding-left: 30px;
-			margin: 0 0 20px 0;
-			li{
-				position: relative;
-				&:before {
-					content:  "—";
-					position: absolute;
-					left: -20px;
-				} 
-			}						
-		}
-		
-		.normalize-promo-a{
-			&:hover{
-				text-decoration: none !important;
+			.normalize-promo-a{
+				&:hover{
+					text-decoration: none !important;
+				}
 			}
 		}
-	}
 
 	}
 	&__bottom{
-			position: fixed;
-			width: 100%;
-			bottom: 0;
-			left: 0;
-			background-color: #e2e6f0;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			table{
-				margin: auto;
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		background-color: #e2e6f0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		table{
+			margin: auto;
+		}
+		.desc{
+			line-height: 1.5;
+			padding: 0 30px;
+		}
+		.button{
+			padding: 0 15px;
+			a{
+				width: 160px;
+				text-align: center;
+				box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
 			}
+		}
+
+		&--large{
+			@extend .xl-v;
+			padding: 20px 30px;
 			.desc{
-				line-height: 1.5;
-				padding: 0 30px;
 			}
 			.button{
-				    padding: 0 15px;
-				a{
-					width: 160px;
-					text-align: center;
-					box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
-				}
+
 			}
+		}	
 
-			&--large{
-				@extend .xl-v;
-				padding: 20px 30px;
-				.desc{
-				}
-				.button{
-					
-				}
-			}	
-
-			&--medium{
-				@extend .l_m-v;
-				.desc{
-					text-align: center;
-				}
-				.button{
-					width: 100%;
-					a{
-						display: block;
-						margin: 10px auto;
-					}
+		&--medium{
+			@extend .l_m-v;
+			.desc{
+				text-align: center;
+			}
+			.button{
+				width: 100%;
+				a{
+					display: block;
+					margin: 10px auto;
 				}
 			}
 		}
+	}
 
 }
 
