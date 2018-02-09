@@ -30,13 +30,17 @@ $(document).ready(function() {
       var anchor = location.href.substr(anchorIndex + 1);
       var elem = $('[name="' + anchor + '"]');
       elem.addClass('active');
+      $('#'+elem.attr('name')).addClass('doc-list__title--active');
     }
     else {
-      $($('li[name]')[0]).addClass('active');
+      $($('a[name]')[0]).addClass('active');
+      $($('li.doc-list__title')[0]).addClass('doc-list__title--active');
     }
-    $('li[name]').click(function(){
-      $('li[name]').removeClass('active');
+    $('a[name]').click(function(){
+      $('a[name]').removeClass('active');
       $(this).addClass('active');
+      $('li.doc-list__title').removeClass('doc-list__title--active');
+      $('#'+this.name).addClass('doc-list__title--active');
     });
   }
 });
