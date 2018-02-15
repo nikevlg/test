@@ -1,9 +1,17 @@
 .categories{
+	position: relative;
+	@include small-screen(){
+		overflow: scroll;
+		height: 100vh;
+	}
 	&__desctop{
 		@include small-screen(){
-			display: none;
-		}
+			height: 100vh;
+		}	
 		&__wrapper{
+			@include small-screen(){
+				height: 100vh;
+			}	
 			display: grid;
 			grid-template-columns: 1fr;
 			grid-template-rows: auto 1fr;
@@ -22,13 +30,17 @@
 				padding: 15px 0; 
 				.active{
 					background-color: $color-green;
-					border-color: $color-green;
+					border-color: $color-green; 
 					color: #fff;
 				} 
 			} 
 			.scroll-section{
 				overflow-x: hidden;
 				overflow-y: scroll;
+				@include small-screen(){
+				height: 100%; 
+				overflow: hidden;
+				}
 			}
 			.doc-list{
 				li{
@@ -98,8 +110,5 @@
 				}
 			}
 		}
-	}
-	&__mobile{
-		min-height: 100vh;
 	}
 }

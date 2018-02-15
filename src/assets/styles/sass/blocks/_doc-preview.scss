@@ -1,10 +1,17 @@
 .doc-preview{
 	position: relative;
-	&__desctop{
+	@include small-screen(){
+		overflow: scroll;
+		height: 100vh;
+	}
+	&__desctop{		
 		@include small-screen(){
-			display: none;
-		}
+			height: 100vh;
+		}	
 		&__wrapper{
+			@include small-screen(){
+				height: 100vh;
+			}	
 			display: grid;
 			grid-template-columns: 1fr;
 			grid-template-rows: auto 1fr;
@@ -33,11 +40,18 @@
 			.scroll-section{
 				overflow-x: hidden;
 				overflow-y: scroll;
+				@include small-screen(){
+					height: 100%; 
+					overflow: hidden;
+				}
 			} 
 		}
 	}
 
 	.document{
+		@include small-screen(){
+			height: 100vh; 
+		}
 		&__title{		
 			background-color: $color-green;
 			padding: 15px 40px;
