@@ -21,84 +21,84 @@
 
 //только на максимальном разрешении
 .xl-v{
-  display: none;
+  display: none !important;
   @include Xlarge-screen(){
-    display: block;
+    display: block !important; 
   }
   @include large-screen(){
-    display: none;
+    display: none !important;
   }
   @include medium-screen(){
-    display: none;
+    display: none !important;
   }
 }
 
 //только на большом разрешении
 .l-v{
-  display: none;
+  display: none !important;
   @include large-screen(){
-    display: block;
+    display: block !important;
   }
   @include medium-screen(){
-    display: none;
+    display: none !important;
   }
 }
 
 //только на среднем разрешении
 .m-v{
-  display: none;
+  display: none !important;
   @include medium-screen(){
-    display: block;
-  }
+    display: block !important; 
+  } 
   @include large-screen(){
-    display: none;
+    display: none !important;
   }
 }
 
 //только на мобильном разрешении
 .s-v{
-  display: none;
+  display: none !important;
   @include Xlarge-screen(){
-    display: none;
+    display: none !important;
   }
   @include large-screen(){
-    display: none;
-  }
+    display: none !important;
+  } 
   @include medium-screen(){
-    display: none;
+    display: none !important;
   } 
   @include small-screen(){
-    display: block; 
+    display: block !important; 
   }
 }
 
 //только на максимальном и большом разрешении
 .xl_l-v{
-  display: none;
+  display: none !important;
   @include Xlarge-screen(){
-    display: block;
+    display: block !important;
   }
   @include large-screen(){
-    display: block;
+    display: block !important;
   }
 }
 //только на большом и среднем разрешении
 .l_m-v{
-  display: none;
+  display: none !important;
   @include large-screen(){
-    display: block;
+    display: block !important;
   }
   @include medium-screen(){
-    display: block;
+    display: block !important;
   }
-}
+} 
 //только на среднем и мобильном разрешении
 .m_s-v{ 
-  display: none;
+  display: none !important;
   @include medium-screen(){
-    display: block;
+    display: block !important;
   }
   @include small-screen(){
-    display: block;
+    display: block !important;
   }
 }

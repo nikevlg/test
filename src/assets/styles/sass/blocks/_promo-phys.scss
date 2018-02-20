@@ -59,6 +59,27 @@
 				margin-top: 20px;
 			}
 		}
+		.present_block{ 		
+			position: absolute;
+			right: 10px;
+			top: 90px; 			
+			text-align: right;
+			span{
+				display: inline-block;
+				line-height: 1.5;
+				margin-bottom: 10px;
+				font-size: 18px;
+				color: #fff;
+
+			}
+			img{
+				display: inline-block;				
+				margin-right: 20px; 			
+			}
+			[alt="Doczilla Skolkovo"]{
+				margin-right: 0; 
+			}
+		}
 	}
 	&__mobile{		
 		height: calc(100vh - 64px);
@@ -100,6 +121,19 @@
 				margin-top: 25px; 
 			}	
 			margin-bottom: 40px;		
+		}
+		.present_block{ 		
+			position: absolute;
+			right: 5%;
+			top: 90px; 	
+			text-align: right;
+			img{
+				display: inline-block;				
+				margin-right: 20px; 			
+			}
+			[alt="Doczilla Skolkovo"]{
+				margin-right: 0; 
+			}
 		}
 	}
 }
