@@ -1,84 +1,101 @@
 
 .video{
-	background: $color-blue-dark;
-		box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25); 
+	background-color: #4d79a3;
+	box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25); 
+	padding-bottom: 20px;
 	/* background: linear-gradient(to bottom, rgba(102,204,153,1) 0%, rgba(77,121,163,1) 25%); */
 	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66cc99', endColorstr='#4d79a3', GradientType=0 );
 	&__desctop{
-		margin-top: 60px;
-		margin-bottom: 90px;
-		&__title{
-			margin: 60px 0;   
-			padding: 0 10px;
-			text-align: center;
-			line-height: 1.5;
-			font-size: 20px;
+		margin: 50px 0;
+		ul{
+			margin-left: 20px;
 			color: #fff;
-		}
-		&__wrapper{
-			margin: 40px auto;
-			@include Xlarge-screen(){
-				width: 90%;
-				height: 640px; 
+			line-height: 40px;
+			li{
+				padding-bottom: 10px;
+				font-size: 20px;
 			}
-			@include large-screen(){
-				width: 95%;
-				height: 550px;
-			}	
-			@include medium-screen(){
-				width: 95%;
-				height: 550px;
-			}		
-			iframe{
+		} 
+		&__title{margin: 0 0 40px 0;
+			text-align: center;
+			h2{
+				@extend %roboto_medium; 
 				width: 100%;
-				height: 100%;
-			}
-		}		
-	} 
-	&__mobile {		
-		position: relative;	
-		box-shadow: 0px -3px 22px 0px rgba(0,0,0,0.3);
-		&__screen{
-			position: relative;
-			width: 100%;
-			height: calc(100vh - 80px);
-			min-height: 300px;
-			background-image: url(/assets/images/Vertical_1.1.jpg); 
-			background-position: center;
-			z-index: 11;
-			&--albom{
-				background-image: url(/assets/images/Horizontal_1.1.jpg);
-			}  
-			&.in-play {
-				opacity: 0;
-				visibility: hidden;
-				z-index: -1;
-			}
-		}
-		&__play-btn {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 56px;
-			height: 56px;
-			background-image: url(/assets/images/play3.png);
-			transform: translate(-50%, -50%);
-			background-size: cover;
-			cursor: pointer;
-			transition: background-color .2s;
-			border-radius: 50%;
+				font-size: 36px;
+				color: #fff;
+				line-height: 1.5;
+				margin-bottom: 0px;
+			}			
 
+		} 
+		&__wrapper{
+/* 			@include Xlarge-screen(){
+			width: 90%;
+			height: 640px; 
 		}
+		@include large-screen(){
+			width: 95%;
+			height: 550px;
+		}	
+		@include medium-screen(){
+			width: 95%;
+			height: 550px;
+		} */		    max-height: 100%;
+		height: 100%;	
+		text-align: right;
+		padding-right: 20px;
 		iframe{
-			position: absolute;
-			top: 0;
-			left: 0; 
-			z-index: 10;
 			width: 100%;
-			height: calc(100vh - 80px);
-			min-height: 300px;
+			max-height: 100%;
+			height: 100%;	border: 1px solid $color-blue-dark;
+			box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25); 
 		}
-		margin-top: 0;
-	}	 
-	
+	}		
+} 
+&__mobile {		
+	position: relative;	
+	box-shadow: 0px -3px 22px 0px rgba(0,0,0,0.3);
+	&__screen{
+		position: relative;
+		width: 100%;
+		height: calc(100vh - 80px);
+		min-height: 300px;
+		background-image: url(/assets/images/Vertical_1.1.jpg); 
+		background-position: center;
+		z-index: 11;
+		&--albom{
+			background-image: url(/assets/images/Horizontal_1.1.jpg);
+		}  
+		&.in-play {
+			opacity: 0;
+			visibility: hidden;
+			z-index: -1;
+		}
+	}
+	&__play-btn {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 56px;
+		height: 56px;
+		background-image: url(/assets/images/play3.png);
+		transform: translate(-50%, -50%);
+		background-size: cover;
+		cursor: pointer;
+		transition: background-color .2s;
+		border-radius: 50%;
+
+	}
+	iframe{
+		position: absolute;
+		top: 0;
+		left: 0; 
+		z-index: 10;
+		width: 100%;
+		height: calc(100vh - 80px);
+		min-height: 300px;
+	}
+	margin-top: 0;
+}	 
+
 }

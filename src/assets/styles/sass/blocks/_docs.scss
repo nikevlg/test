@@ -1,39 +1,86 @@
 .docs{	
-	background-color:  $color-blue-dark;
+	background-color: $color-blue-dark;
 	background-image: url(../images/pattern.png);
-	padding: 25px 0;
+	padding: 15px 0 25px 0;
+		box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25); 
 	&__redirect{
 		text-align: center; 
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 		h2{
-			@extend %roboto_medium;
+			@extend %roboto_medium; 
 			width: 100%;
 			font-size: 36px;
 			color: #fff;
 			margin-top: 15px;
 			line-height: 1.5;
+			margin-bottom: 0;
+
 		}
-		p{
+		p{     margin-top: 10px;
 			font-size: 20px;
-			color: #fff;
+			color: $color-blue-dark;
 			line-height: 1.5;
 		}
 	}
 	&__tags{
 		text-align: center;
 		a{
-			margin: 15px; 
-			&:last-child{
-				margin: 15px; 
+			margin: 8px 5px; 
+			&:last-child{ 
+				margin: 8px 5px; 
 			}
-		}
-		.button{
-			background-color: $color-blue-dark; 
 		}
 	}
 	&__button{
 		text-align: center;
 		margin: 25px 0 15px 0;
+		border-color: #2f6296;
+		color: #2f6296;
+		a.button{
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+}
+
+
+.docs-b{	
+	background-image: url(../images/pattern2.png);
+	padding: 35px 0 50px 0;
+	box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25); 
+	&__redirect{
+		text-align: center; 
+		h2{
+			@extend %roboto_medium; 
+			width: 100%; 
+			font-size: 36px;
+			color: $color-blue-dark;
+			margin-top: 15px;
+			line-height: 1.5; 
+			margin-bottom: 40px !important;
+
+		}
+		p{     
+			margin-top: 10px;
+			font-size: 20px;
+			color: $color-blue-dark;
+			line-height: 1.5;
+		}
+	}
+	&__tags{
+		text-align: center;
+		a{
+			margin: 8px 5px; 
+			&:last-child{ 
+				margin: 8px 5px; 
+			}
+		}
+	}
+	&__button{
+		text-align: center;
+		margin: 25px 0 15px 0;
+		border-color: #2f6296;
+		color: #2f6296;
 		a.button{
 			padding-left: 60px;
 			padding-right: 60px;

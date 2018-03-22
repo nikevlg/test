@@ -74,6 +74,16 @@ a.button, span.button, button.button {
 		color: #fff;	
 		background-color: transparent;	
 	}
+	&--grey {
+		background-color: transparent;
+		border-color: #477bae;
+		color: #2f6296; 
+	}
+	 &--blue{
+		background-color:  $color-blue-dark;
+		border-color: $color-blue-dark;
+		color: #fff; 
+	} 
 
 	&--hover-light:hover {
 		background-color: transparent;

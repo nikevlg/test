@@ -137,14 +137,29 @@
 			padding: 0 30px;
 		}
 		.button{
-			padding: 0 15px;
+			padding: 0 15px;	
+			line-height: 36px !important;	 
 			a{
-				width: 160px;
+				width: 280px; 
+				font-size: 25px;
 				text-align: center;
 				box-shadow: 0px 5px 21px -1px rgba(0,0,0,0.25);
-			}
-		}
+				background-color: $color-yellow ;
+				border-color: $color-yellow;
+				color: #333;
+				&:hover{
+					color: #fff;
+					border-color: $color-green;
+					background-color: $color-green;
+				}
 
+				&:active{
+					color: #fff;
+					border-color: $color-green;
+					background-color: $color-green;
+				}
+			}
+		} 
 		&--large{
 			@extend .xl-v;
 			padding: 20px 30px;
@@ -169,7 +184,51 @@
 			}
 		}
 	}
-
+	&--landing{
+		position: relative;
+		.document{
+			height: auto;
+			min-height: 300px; 
+		}	
+		@include small-screen(){
+			height: auto;
+			overflow: hidden;
+			.document{
+				height: auto;
+				min-height: 300px;
+			}		
+		}
+		.doc-preview__desctop{		
+			@include small-screen(){
+				height: auto;
+			}	
+			&__wrapper{
+				@include small-screen(){
+					height: auto;
+				}	
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: auto 1fr;
+				display: -ms-grid;
+				-ms-grid-columns:  1fr;
+				-ms-grid-rows: auto 1fr;  
+				width: 100%;
+				height: auto;
+			}
+		}
+		img{
+			float: left;
+			margin-right: 30px;
+			margin-bottom: 94px; 
+			@include small-screen(){
+				display: none;
+			}
+		}
+		.doc-preview__bottom{
+			position: absolute;
+		}
+		
+	}
 }
 
 

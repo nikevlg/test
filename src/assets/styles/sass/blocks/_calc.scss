@@ -1,6 +1,7 @@
 .calc{
 	&__desctop{
 		margin-bottom: 50px;
+		margin-top: 40px;
 		table{
 			border-collapse: collapse;
 			border-spacing: 0;
@@ -8,7 +9,6 @@
 			margin: 20px auto;
 			color: $color-blue-dark;
 		}
-
 		td{
 			vertical-align: middle; 
 			height: 60px; 
