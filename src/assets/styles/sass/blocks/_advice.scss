@@ -3,6 +3,9 @@
 	margin-bottom: 50px;
 	&__description{
 		padding: 86px 70px;
+		@include small-screen(){
+			padding: 60px 10px;
+		}
 		h2{
 			font-size: 36px;
 			font-weight: bold;
@@ -10,7 +13,7 @@
 			margin-bottom: 25px;
 		}
 		h3{
-			font-size: 20px;
+			font-size: 20px; 
 			font-weight: bold; 
 			color: $color-blue-dark ;
 			margin-bottom: 10px;
