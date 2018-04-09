@@ -122,4 +122,12 @@
   a {
     text-decoration: none;
   }
-}
+  .footer{
+    a{
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }  
+  }
+} 
