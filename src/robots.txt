@@ -1,12 +1,18 @@
 User-agent: *
-Allow:
+Disallow: /*openstat*
+Disallow: /*?utm*
+Disallow: /*&utm*
+Disallow: /*?from*
+Disallow: /*&from*
+Disallow: /*gclid*
+Disallow: /*yclid*
+Disallow: /*ymclid*
+Disallow: /*?tid*
+Disallow: /*&tid*
+Disallow: /*.swf
 
 User-agent: Googlebot
-Allow:
+Disallow:
 
-User-agent: Yandex
-Allow:
-
-Host: https://doczilla.ru/
-
+Host: https://doczilla.ru/	
 Sitemap: https://doczilla.ru/sitemap.xml
