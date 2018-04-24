@@ -19,30 +19,9 @@ window.onresize = function(event) {
 $(document).ready(function() {  
   initCallbackPopup();
   initForms();
-  if (location.pathname == "/") {  // promo
-    initCalculator();
-    initFloatingBlock();
-    modalPadding();
-  }
-  else { // category    
-    var anchorIndex = location.href.indexOf('#');
-    if (anchorIndex >=0) {
-      var anchor = location.href.substr(anchorIndex + 1);
-      var elem = $('[name="' + anchor + '"]');
-      elem.addClass('active');
-      $('#'+elem.attr('name')).addClass('doc-list__title--active');
-    }
-    else {
-      $($('a[name]')[0]).addClass('active');
-      $($('li.doc-list__title')[0]).addClass('doc-list__title--active');
-    }
-    $('a[name]').click(function(){
-      $('a[name]').removeClass('active');
-      $(this).addClass('active');
-      $('li.doc-list__title').removeClass('doc-list__title--active');
-      $('#'+this.name).addClass('doc-list__title--active');
-    });
-  }
+  initCalculator();
+  initFloatingBlock();
+  modalPadding();  
 });
 
 // Calculator
