@@ -60,11 +60,11 @@
 		width: 100%;
 		height: calc(100vh - 80px);
 		min-height: 300px;
-		background-image: url(/assets/images/Vertical_1.1.jpg); 
+		background-image: url(/promo-assets/images/Vertical_1.1.jpg); 
 		background-position: center;
 		z-index: 11;
 		&--albom{
-			background-image: url(/assets/images/Horizontal_1.1.jpg);
+			background-image: url(/promo-assets/images/Horizontal_1.1.jpg);
 		}  
 		&.in-play {
 			opacity: 0;
@@ -78,7 +78,7 @@
 		left: 50%;
 		width: 56px;
 		height: 56px;
-		background-image: url(/assets/images/play3.png);
+		background-image: url(/promo-assets/images/play3.png);
 		transform: translate(-50%, -50%);
 		background-size: cover;
 		cursor: pointer;

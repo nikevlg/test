@@ -1,4 +1,4 @@
-User-agent: *
+User-agent: Yandex
 Disallow: /*openstat*
 Disallow: /*?utm*
 Disallow: /*&utm*
@@ -12,7 +12,43 @@ Disallow: /*&tid*
 Disallow: /*.swf
 
 User-agent: Googlebot
-Disallow:
+Disallow: /*openstat*
+Disallow: /*?utm*
+Disallow: /*&utm*
+Disallow: /*?from*
+Disallow: /*&from*
+Disallow: /*gclid*
+Disallow: /*yclid*
+Disallow: /*ymclid*
+Disallow: /*?tid*
+Disallow: /*&tid*
+Disallow: /*.swf
 
-Host: https://doczilla.ru/	
+User-agent: Mail.Ru
+Disallow: /*openstat*
+Disallow: /*?utm*
+Disallow: /*&utm*
+Disallow: /*?from*
+Disallow: /*&from*
+Disallow: /*gclid*
+Disallow: /*yclid*
+Disallow: /*ymclid*
+Disallow: /*?tid*
+Disallow: /*&tid*
+Disallow: /*.swf
+
+User-agent: *
+Disallow: /*openstat*
+Disallow: /*?utm*
+Disallow: /*&utm*
+Disallow: /*?from*
+Disallow: /*&from*
+Disallow: /*gclid*
+Disallow: /*yclid*
+Disallow: /*ymclid*
+Disallow: /*?tid*
+Disallow: /*&tid*
+Disallow: /*.swf
+
+Host: https://doczilla.ru	
 Sitemap: https://doczilla.ru/sitemap.xml

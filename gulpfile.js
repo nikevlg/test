@@ -43,35 +43,35 @@ paths = {
   templates: ['./src/templates/**/*.html', '!./src/templates/blocks/**/*.html'],
   templateswatch: './src/templates/**/*.html',
   tmp: './tmp/**/*.*',
-  svg: './src/assets/svg/*.svg',
-  svgTemplate: './src/assets/svg/icon-font',
-  scss: './src/assets/styles/sass/**/*.scss',
-  scripts: ['./src/assets/scripts/*.js'],
-  images: ['./src/assets/images/*.*'],
-  docs: ['./src/assets/docs/*.*'],
+  svg: './src/promo-assets/svg/*.svg',
+  svgTemplate: './src/promo-assets/svg/icon-font',
+  scss: './src/promo-assets/styles/sass/**/*.scss',
+  scripts: ['./src/promo-assets/scripts/*.js'],
+  images: ['./src/promo-assets/images/*.*'],
+  docs: ['./src/promo-assets/docs/*.*'],
   favicon: ['./src/favicon/*.*'],
-  fonts: './src/assets/fonts/*.*',
+  fonts: './src/promo-assets/fonts/*.*',
   sasslibs: ['./src/libs/**/*.css', './src/libs/**/*.sass', './src/libs/**/*.scss', '!./src/libs/**/*.min.css'],
   scriptslibs: ['./src/libs/**/*.js', '!./src/libs/**/*.min.js']
 };
  
 buildPaths = {
   app: './build/',
-  styles: './build/assets/css/',
-  scripts: './build/assets/js/',
-  docs: './build/assets/docs/',
-  images: './build/assets/images/',
-  fonts: './build/assets/fonts/',
+  styles: './build/promo-assets/css/',
+  scripts: './build/promo-assets/js/',
+  docs: './build/promo-assets/docs/',
+  images: './build/promo-assets/images/',
+  fonts: './build/promo-assets/fonts/',
   favicon: './build/favicon/'
 };
 
 // Urls in build modes
 urlPaths = {
   prod: [
-    ['DYNAMIC_URL_PROMO_PAGE', 'https://doczilla.ru'],
+    ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.ru'],
     ['DYNAMIC_URL_REQUEST_API', 'https://doczilla.ru'],
     ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.ru/branch/besplatnye'],
-    ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.ru/'],
+    ['DYNAMIC_URL_FORMS', 'https://doczilla.ru/branch'],
     ['DYNAMIC_URL_ADVICES', 'https://doczilla.ru/bookAdvice'],
     ['DYNAMIC_URL_USER_HELP', 'https://doczilla.ru/userHelp#0&1'],
     ['DYNAMIC_URL_TARIFFS', 'https://doczilla.ru/tariffs'],
@@ -79,10 +79,10 @@ urlPaths = {
     ['DYNAMIC_URL_FORM_CLAIM', 'https://doczilla.ru/form/669']
   ],
   test: [
-    ['DYNAMIC_URL_PROMO_PAGE', 'https://promo.obt-vlg.ru'],
+    ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru'],
     ['DYNAMIC_URL_REQUEST_API', 'https://doczilla.obt-vlg.ru'],
     ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.obt-vlg.ru/branch/besplatnye'],
-    ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru/'], 
+    ['DYNAMIC_URL_FORMS', 'https://doczilla.obt-vlg.ru/branch'], 
     ['DYNAMIC_URL_ADVICES', 'https://doczilla.obt-vlg.ru/bookAdvice'],
     ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/userHelp#0&1'],
     ['DYNAMIC_URL_TARIFFS', 'https://doczilla.obt-vlg.ru/tariffs'],
