@@ -84,6 +84,16 @@ a.button, span.button, button.button {
 		border-color: $color-blue-dark;
 		color: #fff; 
 	} 
+	&--orange {
+		background-color: $color-orange;
+		border-color: $color-orange;
+		color: #fff;
+	}
+	&--hover-orange:hover {
+		background-color: #fff;
+		border-color: $color-orange;
+		color: $color-orange;
+	}
 
 	&--hover-light:hover {
 		background-color: transparent;

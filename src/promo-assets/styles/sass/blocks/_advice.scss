@@ -63,4 +63,10 @@
 			margin-top: 20px;
 		}
 	}
+	.button.button--green{
+		&:hover{
+			color: $color-green;
+			background-color: transparent;
+		}
+	}
 }
