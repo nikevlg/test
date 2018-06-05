@@ -57,11 +57,11 @@ paths = {
  
 buildPaths = {
   app: './build/',
-  styles: './build/promo-assets/css/',
-  scripts: './build/promo-assets/js/',
-  docs: './build/promo-assets/docs/',
-  images: './build/promo-assets/images/',
-  fonts: './build/promo-assets/fonts/',
+  styles: './build/promo/promo-assets/css/',
+  scripts: './build/promo/promo-assets/js/',
+  docs: './build/promo/promo-assets/docs/',
+  images: './build/promo/promo-assets/images/',
+  fonts: './build/promo/promo-assets/fonts/',
   favicon: './build/favicon/'
 };
 

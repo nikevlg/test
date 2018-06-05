@@ -18,6 +18,9 @@
 			position: absolute;
 			right: -332px;
 			top: -18px;
+			@media all and (max-width: 1200px)   {
+				display: none;
+			}
 			&:hover{
 				animation: load 0.5s linear;
 			}
