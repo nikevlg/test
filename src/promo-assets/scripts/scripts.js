@@ -27,7 +27,7 @@ $(document).ready(function() {
 // Calculator
 function initCalculator() {
   var selectedTariff = 1;
-  var selectedMonthIndex = 3;
+  var selectedMonthIndex = 1;
   var cellClassNames = ['js-column-pterodactyl','js-column-mastodon','js-column-tyrannosaurus'];
   var buttonClassNames = ['js-button-pterodactyl','js-button-mastodon','js-button-tyrannosaurus'];
   var description = ['Тариф для тех, кому не приходится <br>сталкиваться с бумажной <br> волокитой ежедневно. Доступ <br> ко всей базе юридических <br> документов Doczilla без <br> ' + 

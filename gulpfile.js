@@ -70,8 +70,8 @@ urlPaths = {
   prod: [
     ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.ru'],
     ['DYNAMIC_URL_REQUEST_API', 'https://doczilla.ru'],
-    ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.ru/branch/besplatnye'],
-    ['DYNAMIC_URL_FORMS', 'https://doczilla.ru/branch'],
+    ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.ru/docs/besplatnye'],
+    ['DYNAMIC_URL_FORMS', 'https://doczilla.ru/docs'],
     ['DYNAMIC_URL_ADVICES', 'https://doczilla.ru/bookAdvice'],
     ['DYNAMIC_URL_USER_HELP', 'https://doczilla.ru/userHelp#0&1'],
     ['DYNAMIC_URL_TARIFFS', 'https://doczilla.ru/tariffs'],
@@ -81,8 +81,8 @@ urlPaths = {
   test: [
     ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru'],
     ['DYNAMIC_URL_REQUEST_API', 'https://doczilla.obt-vlg.ru'],
-    ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.obt-vlg.ru/branch/besplatnye'],
-    ['DYNAMIC_URL_FORMS', 'https://doczilla.obt-vlg.ru/branch'], 
+    ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.obt-vlg.ru/docs/besplatnye'],
+    ['DYNAMIC_URL_FORMS', 'https://doczilla.obt-vlg.ru/docs'], 
     ['DYNAMIC_URL_ADVICES', 'https://doczilla.obt-vlg.ru/bookAdvice'],
     ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/userHelp#0&1'],
     ['DYNAMIC_URL_TARIFFS', 'https://doczilla.obt-vlg.ru/tariffs'],
