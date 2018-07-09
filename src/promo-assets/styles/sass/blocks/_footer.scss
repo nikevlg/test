@@ -19,18 +19,30 @@
 				font-family: 'Roboto-Regular';
 			}
 			li{
-				margin-bottom: 10px; 
-			}
-			a{
-				color: #fff;
-			}
-			span{
-				cursor: pointer;
-				text-decoration: underline;
-				&:hover{
-					text-decoration: none;
+				margin-bottom: 10px; 	
+				span{
+					cursor: pointer;
+					text-decoration: underline;
+				}						
+				a{
+					display: block;
+					color: #fff;
+					*{
+						cursor: pointer;
+						text-decoration: underline;
+					}
+					&:hover{
+						*{
+							text-decoration: none;			 		
+						}
+					} 
 				}
-			}
+				&:hover{
+					*{
+						text-decoration: none;					
+					}
+				} 
+			}			
 		}	
 
 		&--mobile{
@@ -142,7 +154,7 @@
 					}
 				}
 				.button{
-				    padding: 0 40px;
+					padding: 0 40px;
 					font-size: 16px;
 					border-radius: 4px;
 					border: 1px solid #ccc;
