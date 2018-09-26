@@ -1,8 +1,8 @@
 {
-  "name": "doczilla",
+  "name": "Test",
   "version": "2.0.0",
-  "description": "promo site",
-  "author": "",
+  "description": "Test",
+  "author": "Suzdaltsev Yuriy",
   "license": "ISC",
   "devDependencies": {
     "args": "^3.0.4",
@@ -15,8 +15,6 @@
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-iconfont": "^8.0.1",
-    "gulp-iconfont-css": "^2.1.0",
     "gulp-imagemin": "^3.3.0",
     "gulp-path": "^3.0.3",
     "gulp-plumber": "^1.1.0",

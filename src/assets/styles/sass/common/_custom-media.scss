@@ -1,0 +1,8 @@
+ @mixin small-screen {
+  @media all and (max-width: $mobile-breakpoint) {
+    @content
+  }
+}
+
+
+ 

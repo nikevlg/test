@@ -2,8 +2,8 @@
 var gulp, gutil, browserSync, browserSyncInit, connect, 
 	watch, myWatch, replace, args, sourcemaps, path, 
 	paths, buildPaths, urlPaths, metaTags, plumber, sequence, clean, rigger, 
-	rename, concat, sass, 	cleanCss, prefix, imagemin, 
-	iconfont, runTimestamp, iconfontCss, uglify, rename, htmlmin;
+	rename, concat, sass, cleanCss, prefix, imagemin, 
+	runTimestamp,  uglify, rename, htmlmin;
 
 /*--Utils--*/
 gulp        = require('gulp');
@@ -22,6 +22,7 @@ sourcemaps  = require('gulp-sourcemaps');
 clean       = require('gulp-clean');
 sequence    = require('run-sequence');
 htmlmin     = require('gulp-htmlmin');
+
 /*--Styles--*/
 sass        = require('gulp-sass'); 
 cleanCss    = require('gulp-clean-css');
@@ -33,86 +34,41 @@ uglify = require('gulp-uglify');
 /*--Images--*/
 imagemin    = require('gulp-imagemin');
 
-/*--svg Icons--*/
-iconfont    = require('gulp-iconfont');
-iconfontCss = require('gulp-iconfont-css');
-runTimestamp = Math.round(Date.now()/1000);
-
 /*--Paths--*/
 paths = { 
   templates: ['./src/templates/**/*.html', '!./src/templates/blocks/**/*.html'],
   templateswatch: './src/templates/**/*.html',
   tmp: './tmp/**/*.*',
-  svg: './src/promo-assets/svg/*.svg',
-  svgTemplate: './src/promo-assets/svg/icon-font',
-  scss: './src/promo-assets/styles/sass/**/*.scss',
-  scripts: ['./src/promo-assets/scripts/*.js'],
-  images: ['./src/promo-assets/images/*.*'],
-  docs: ['./src/promo-assets/docs/*.*'],
+  scss: './src/assets/styles/sass/**/*.scss',
+  scripts: ['./src/assets/scripts/*.js'],
+  images: ['./src/assets/images/*.*'],
   favicon: ['./src/favicon/*.*'],
-  fonts: './src/promo-assets/fonts/*.*',
+  fonts: './src/assets/fonts/*.*',
   sasslibs: ['./src/libs/**/*.css', './src/libs/**/*.sass', './src/libs/**/*.scss', '!./src/libs/**/*.min.css'],
   scriptslibs: ['./src/libs/**/*.js', '!./src/libs/**/*.min.js']
 };
  
 buildPaths = {
   app: './build/',
-  styles: './build/promo/promo-assets/css/',
-  scripts: './build/promo/promo-assets/js/',
-  docs: './build/promo/promo-assets/docs/',
-  images: './build/promo/promo-assets/images/',
-  fonts: './build/promo/promo-assets/fonts/',
+  styles: './build/assets/css/',
+  scripts: './build/assets/js/',
+  docs: './build/assets/docs/',
+  images: './build/assets/images/',
+  fonts: './build/assets/fonts/',
   favicon: './build/favicon/'
 };
 
 // Urls in build modes
 urlPaths = {
   prod: [
-    ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.ru'],
-    ['DYNAMIC_URL_REQUEST_API', 'https://doczilla.ru'],
-    ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.ru/docs/besplatnye'],
-    ['DYNAMIC_URL_FORMS', 'https://doczilla.ru/docs'],
-    ['DYNAMIC_URL_ADVICES', 'https://doczilla.ru/bookAdvice'],
-    ['DYNAMIC_URL_USER_HELP', 'https://doczilla.ru/userHelp#0&1'],
-    ['DYNAMIC_URL_TARIFFS', 'https://doczilla.ru/tariffs'],
-    ['DYNAMIC_URL_FORM_PRETENSION', 'https://doczilla.ru/form/666'],
-    ['DYNAMIC_URL_FORM_CLAIM', 'https://doczilla.ru/form/669']
+    ['DYNAMIC_URL', 'https:temp.ru']
   ],
   test: [
-    ['DYNAMIC_URL_MAIN_PAGE', 'https://doczilla.obt-vlg.ru'],
-    ['DYNAMIC_URL_REQUEST_API', 'https://doczilla.obt-vlg.ru'],
-    ['DYNAMIC_URL_FREE_FORMS', 'https://doczilla.obt-vlg.ru/docs/besplatnye'],
-    ['DYNAMIC_URL_FORMS', 'https://doczilla.obt-vlg.ru/docs'], 
-    ['DYNAMIC_URL_ADVICES', 'https://doczilla.obt-vlg.ru/bookAdvice'],
-    ['DYNAMIC_URL_USER_HELP', 'https://doczilla.obt-vlg.ru/userHelp#0&1'],
-    ['DYNAMIC_URL_TARIFFS', 'https://doczilla.obt-vlg.ru/tariffs'],
-    ['DYNAMIC_URL_FORM_PRETENSION', 'https://doczilla.obt-vlg.ru/form/652'],
-    ['DYNAMIC_URL_FORM_CLAIM', 'https://doczilla.obt-vlg.ru/form/653']
+     ['DYNAMIC_URL', 'https:temp.ru']
   ]
 };
-
-// Meta-tags in build modes
-metaTags = {
-  prod: [
-    [/<!-- ONLY_FOR_PROD_STARTS-->([\s\S]*?)<!-- ONLY_FOR_PROD_ENDS-->/g, '$1'],
-    [/<!-- ONLY_FOR_TEST_STARTS-->([\s\S]*?)<!-- ONLY_FOR_TEST_ENDS-->/g, '']
-  ],
-  test: [
-    [/<!-- ONLY_FOR_PROD_STARTS-->([\s\S]*?)<!-- ONLY_FOR_PROD_ENDS-->/g, ''],
-    [/<!-- ONLY_FOR_TEST_STARTS-->([\s\S]*?)<!-- ONLY_FOR_TEST_ENDS-->/g, '$1']
-  ]
-};
-
 
 /*--Tasks--*/
-
-gulp.task('robots-sitemap', function() {
-  var version = args.argv.mode === 'prod' ? 'prod':'test';
-  if (version === 'prod') {
-    return gulp.src(['./src/robots.txt', './src/sitemap.xml']).pipe(gulp.dest('./build/'));
-  };
-});
-
 gulp.task('clean', function () {  
     return gulp.src(['build','tmp'], {read: false})
         .pipe(clean()); 
@@ -121,11 +77,9 @@ gulp.task('clean', function () {
 gulp.task('insertHtml', function () {
   var version = args.argv.mode === 'prod' ? 'prod':'test';
   var urlReplacement = urlPaths[version];
-  var metaTagsReplacement = metaTags[version];
     return gulp.src(paths.templates)
         .pipe(rigger())
         .pipe(replace(urlReplacement))
-        .pipe (replace (metaTagsReplacement))
         .pipe(gulp.dest('./tmp/'));
 });
 
@@ -138,24 +92,6 @@ gulp.task('templates', ['insertHtml'], function() {
    };
   return gulp.src(paths.tmp)
   .pipe(gulp.dest(buildPaths.app));
-});
-
-gulp.task('Iconfont', function(){
-    return gulp.src(paths.svg)  //путь где лежат иконки
-        .pipe(iconfontCss({
-            fontName: 'doczilla-icons',
-            cssClass: 'doc-icon',
-            path: paths.svgTemplate, //путь до шаблона стилей 
-            targetPath: '../_icon-fonts.scss', //путь вывода sass стилей иконок (от gulp.dest())
-            fontPath: '../fonts/'//путь где лежат скомпиленные шрифты
-        }))
-        .pipe(iconfont({
-            fontName: 'doczilla-icons',
-            prependUnicode: true, // recommended option
-            formats: ['ttf', 'eot', 'woff', 'svg'], // default, 'woff2' and 'svg' are available
-            timestamp: runTimestamp // recommended to get consistent builds when watching files
-        }))
-        .pipe(gulp.dest('./tmp/fonts'));
 });
 
 gulp.task('sass', function() {
@@ -223,10 +159,6 @@ gulp.task('favicon', function() {
   return gulp.src(paths.favicon).pipe(gulp.dest(buildPaths.app));
 });
 
-gulp.task('docs', function() {
-  return gulp.src(paths.docs).pipe(gulp.dest(buildPaths.docs));
-});
-
 gulp.task('server', function() {
   connect.server({
       root: ['./build/'],
@@ -235,8 +167,8 @@ gulp.task('server', function() {
 });
 
 gulp.task('compile', function (done) {
-    sequence('clean', 'templates', 'Iconfont', 'fontslibs', 'fonts', 'sass', 'sass-libs', 'js', 'js-libs', 
-             'images', 'favicon', 'robots-sitemap', 'docs', done);
+    sequence('clean', 'templates', 'fontslibs', 'fonts', 'sass', 'sass-libs', 'js', 'js-libs', 
+             'images', 'favicon',  done);
 });
 
 gulp.task('default', ['compile', 'server'], function () {
@@ -262,10 +194,7 @@ gulp.task('template-reload', ['templates'], function(done) {
   done();
 })
 
-gulp.task('images-reload', ['images'], function(done) { //не работает на добавление картинок
+gulp.task('images-reload', ['images'], function(done) { 
   browserSync.reload();
   done();
 })
-
-// gulp - собрать test
-// gulp --mode prod - собрать prod версию  (без автозапуска на 4000 порту)
