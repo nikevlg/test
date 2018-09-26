@@ -198,3 +198,6 @@ gulp.task('images-reload', ['images'], function(done) {
   browserSync.reload();
   done();
 })
+
+// gulp - собрать без минификации
+// gulp --mode prod - собрать минифицированную версию  (без автозапуска, на 4000 порту)
